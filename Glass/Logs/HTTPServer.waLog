@@ -1,0 +1,196 @@
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 13:57:15
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+403 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 / - /index.waPage/ 2013-06-25 20:57:15 20:57:15 143
+26694 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /favicon.ico - /favicon.ico 2013-06-25 20:57:15 20:57:15 327
+0 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 / - /index.waPage/ 2013-06-25 20:57:17 20:57:17 1701
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:21 20:57:21 1
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:22 20:57:22 2
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 13:57:44
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:44 20:57:44 2
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:46 20:57:46 1735
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:46 20:57:46 769
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:47 20:57:47 465
+1619 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest - /index.waPage/rest/ 2013-06-25 20:57:47 20:57:47 410
+11 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /rest/ - /rest/ 2013-06-25 20:57:51 20:57:51 6
+11 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /rest/ - /rest/ 2013-06-25 20:57:52 20:57:52 1184
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 13:58:12
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest/ - /index.waPage/rest/ 2013-06-25 20:58:12 20:58:12 2
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest/ - /index.waPage/rest/ 2013-06-25 20:58:13 20:58:13 749
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /rest/ - /index.waPage/rest/ 2013-06-25 20:58:13 20:58:13 183
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 13:59:18
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 / - /index.waPage/ 2013-06-25 20:59:18 20:59:18 1
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 404 /server-runner.html - /index.waPage/server-runner.html/ 2013-06-25 21:00:11 21:00:11 2
+652 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /server_runner.html - /server_runner.html 2013-06-25 21:00:38 21:00:38 1
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - POST ::1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:00:38 21:00:38 62
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - POST ::1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:00:41 21:00:41 2650
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:00:43 21:00:43 1
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 14:01:25
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+652 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /server_runner.html - /server_runner.html 2013-06-25 21:01:25 21:01:25 1
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - POST ::1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:01:25 21:01:25 59
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=DB161A06EE9C4342A6680D000171D4F9" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:01:33 21:01:33 1
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=EC8C69CF21634456BD12A1A3200C24E2" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:02:33 21:02:33 1
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=EC8C69CF21634456BD12A1A3200C24E2" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:02:33 21:02:33 65
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 14:02:58
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=E944AB1EE4E845478960C65A7AE1D013" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:02:58 21:02:58 2
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=E944AB1EE4E845478960C65A7AE1D013" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:02:58 21:02:58 37
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=7230ADFFEB7B4D3CA44E0E9AAA57AC21" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:03:01 21:03:01 1
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=7230ADFFEB7B4D3CA44E0E9AAA57AC21" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:03:01 21:03:01 33
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=8B62978BF296479D963FC22CF8A84BFB" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:03:23 21:03:23 1
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=8B62978BF296479D963FC22CF8A84BFB" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:03:23 21:03:23 67
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=896E6B7CE84048F0A13B541963B8B36B" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:04:05 21:04:05 1
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=896E6B7CE84048F0A13B541963B8B36B" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:04:05 21:04:05 36
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=896E6B7CE84048F0A13B541963B8B36B" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:04:06 21:04:06 2
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=896E6B7CE84048F0A13B541963B8B36B" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:04:06 21:04:06 34
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=016F334E6338445EBB29E0AED6DB92C3" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:05:20 21:05:20 161
+1619 ::1 ::1 "waReferer=/index.waPage/; WASID=016F334E6338445EBB29E0AED6DB92C3" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:05:20 21:05:20 1
+#Version: 1.0
+#Software: Wakanda/5 build 5.134039 (MacOS-x64)
+#Date: 2013-06-25 14:06:28
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+0 ::1 ::1 "waReferer=/index.waPage/; WASID=59B9CF95D9B64D69803A5D52A8CBF0A7" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 304 /server_runner.html - /server_runner.html 2013-06-25 21:06:28 21:06:28 3
+22 ::1 ::1 "waReferer=/index.waPage/; WASID=59B9CF95D9B64D69803A5D52A8CBF0A7" "localhost:8081" "http://localhost:8081/server_runner.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" admin POST ::1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:07:22 21:07:22 53768
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:07:34 21:07:34 16
+14 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=ABCB13C4A2744158B2954BD7416894E7" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:07:34 21:07:34 15
+255 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=ABCB13C4A2744158B2954BD7416894E7" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:13:39 21:13:39 63886
+255 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=ABCB13C4A2744158B2954BD7416894E7" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:13:44 21:13:44 48790
+250 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=ABCB13C4A2744158B2954BD7416894E7" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:14:52 21:14:52 36124
+250 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=ABCB13C4A2744158B2954BD7416894E7" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:15:16 21:15:16 14116
+#Version: 1.0
+#Software: Wakanda/5 build 5.134039 (MacOS-x64)
+#Date: 2013-06-25 14:17:11
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+0 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=ABCB13C4A2744158B2954BD7416894E7" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:17:11 21:17:11 1
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:17:11 21:17:11 15
+250 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=E620F711C07544C6AE4773DA75D2EF81" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:17:43 21:17:43 32125
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 14:18:21
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+0 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=E620F711C07544C6AE4773DA75D2EF81" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:18:21 21:18:21 0
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:18:21 21:18:21 5
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:18:21 21:18:21 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:18:28 21:18:28 0
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:20:23 21:20:23 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:20:31 21:20:31 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:20:38 21:20:38 0
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:20:56 21:20:56 2
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:21:05 21:21:05 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:23:24 21:23:24 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:24:28 21:24:28 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:24:35 21:24:35 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:24:47 21:24:47 2
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:25:47 21:25:47 3
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=FD5559EFC5B04A328F53BB74167E9CF3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:26:04 21:26:04 1
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 14:26:31
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:26:31 21:26:31 7
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=E2ECB3FBDE4F429199162C51E80C7648" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:26:31 21:26:31 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=E2ECB3FBDE4F429199162C51E80C7648" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:26:39 21:26:39 0
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=E2ECB3FBDE4F429199162C51E80C7648" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:27:38 21:27:38 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=E2ECB3FBDE4F429199162C51E80C7648" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:27:41 21:27:41 1
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 14:28:37
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:28:37 21:28:37 6
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:28:37 21:28:37 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:28:46 21:28:46 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:28:52 21:28:52 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:28:53 21:28:53 0
+465 ::1 ::1 "waReferer=/index.waPage/; WASID=FEF706731A41455493E0F641AE5D6243" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /rest/$catalog/$all - /rest/$catalog/$all 2013-06-25 21:29:44 21:29:44 1
+465 ::1 ::1 "waReferer=/index.waPage/; WASID=D03EC6C2375C4EBD8B583E159E347BF5" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /rest/$catalog/$all - /rest/$catalog/$all 2013-06-25 21:30:00 21:30:00 1
+465 ::1 ::1 "waReferer=/index.waPage/; WASID=D03EC6C2375C4EBD8B583E159E347BF5" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /rest/$catalog/$all - /rest/$catalog/$all 2013-06-25 21:30:02 21:30:02 2377
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:30:16 21:30:16 0
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:30:45 21:30:45 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:30:52 21:30:52 1
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=0BD5CB1373024547BF56A6F14E6349DE" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:31:05 21:31:05 1
+#Version: 1.0
+#Software: Wakanda/4 build 4.132351 (MacOS-x64)
+#Date: 2013-06-25 14:31:26
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:31:26 21:31:26 5
+1619 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=28A786F4DF37441CAECBE3044C10ECE8" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 404 /debug/eval/file - /debug/eval/file 2013-06-25 21:31:26 21:31:26 1
+#Version: 1.0
+#Software: Wakanda/5 build 5.134039 (MacOS-x64)
+#Date: 2013-06-25 14:33:29
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+0 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=28A786F4DF37441CAECBE3044C10ECE8" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 401 /debug/eval/file - /debug/eval/file 2013-06-25 21:33:29 21:33:29 0
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 21:33:29 21:33:29 14
+12 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:33:30 21:33:30 14
+13 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:33:39 21:33:39 17
+13 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:33:45 21:33:45 16
+283 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:34:05 21:34:05 13633
+283 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:34:43 21:34:43 15781
+296 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:34:56 21:34:56 15
+296 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:35:00 21:35:00 15
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:35:09 21:35:09 17
+19 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 21:35:30 21:35:30 18
+242 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:38:34 21:38:34 156626
+252 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:38:54 21:38:54 3541
+263 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:53:14 21:53:14 275373
+244 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 21:55:47 21:55:47 146651
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:05:36 22:05:36 84858
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:09:56 22:09:56 254463
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:10:28 22:10:28 26754
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:11:57 22:11:57 43999
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:14:16 22:14:16 37981
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:15:56 22:15:56 40760
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:16:54 22:16:54 53846
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:17:34 22:17:34 14652
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:19:25 22:19:25 22389
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=CF52DB3FD3E34144B8468D2E0396F2D3" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:21:32 22:21:32 14872
+#Version: 1.0
+#Software: Wakanda/5 build 5.134039 (MacOS-x64)
+#Date: 2013-06-25 15:22:11
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 22:22:11 22:22:11 15
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=08AC82CAC90D4899893C4A15AE0DE38E" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:22:58 22:22:58 46507
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=08AC82CAC90D4899893C4A15AE0DE38E" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:23:34 22:23:34 7759
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=08AC82CAC90D4899893C4A15AE0DE38E" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:24:20 22:24:20 12771
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=08AC82CAC90D4899893C4A15AE0DE38E" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:25:16 22:25:16 6364
+#Version: 1.0
+#Software: Wakanda/5 build 5.134039 (MacOS-x64)
+#Date: 2013-06-25 15:25:32
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 22:25:32 22:25:32 13
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:25:47 22:25:47 14999
+19 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:26:15 22:26:15 21
+19 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:27:03 22:27:03 17
+13 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:28:13 22:28:13 18
+22 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:28:20 22:28:20 17
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:28:24 22:28:24 20
+251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:29:05 22:29:05 6144

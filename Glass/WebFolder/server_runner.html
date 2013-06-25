@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Wakanda Remote Console</title>
+        <script type="text/javascript">
+            var fd = new FormData()
+                url= "http://" + window.location.hostname + ":" + window.location.port + "/debug/eval/file"
+            ;
+            fd.append("url", "");
+            fd.append("script", "debugger;");
+            fd.append("options", "{'persistantContext':'true'}");
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url);
+            xhr.send(fd);
+        </script>
+    </head>
+    <body class="claro"><h1 id="message">Initiating Persistant Context...</h1></body>
+</html>
