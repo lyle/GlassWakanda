@@ -3,7 +3,6 @@
 ._*
 # Wakanda data
 *.waData
-*/DataFolder/data.waData
 # Wakanda preferences
 *.waPreferences
 # Wakanda log
