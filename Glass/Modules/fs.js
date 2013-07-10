@@ -1,1 +1,0 @@
-﻿var fs = {};fs.existsSync = function(path){	return File(path).exists;}fs.love = function(){	return true;}//exports.helloWorld = function helloWorld () {//	return ('Hello world');//};module.exports = fs;
