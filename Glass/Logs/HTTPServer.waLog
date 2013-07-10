@@ -194,3 +194,17 @@
 22 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:28:20 22:28:20 17
 15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:28:24 22:28:24 20
 251 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=8E177C13A8314B04B18F394B626F811B" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:29:05 22:29:05 6144
+#Version: 1.0
+#Software: Wakanda/5 build 5.134039 (MacOS-x64)
+#Date: 2013-06-25 15:30:31
+#Remark: format ELF
+#Fields: BYTES_SENT CS-CDNS C-IP CS(COOKIE) CS(HOST) CS(REFERER) CS(USER-AGENT) USER METHOD CS-SIP SC-STATUS CS-URI CS-URI-QUERY CS-URI-STEM DATE TIME TIME-TAKEN
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /rest/$directory/login/ - /rest/$directory/login/ 2013-06-25 22:30:31 22:30:31 14
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:30:31 22:30:31 17
+15 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:30:52 22:30:52 17
+16 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:31:09 22:31:09 16
+16 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:31:21 22:31:21 21
+13 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:32:06 22:32:06 23
+18 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 200 /debug/eval/file - /debug/eval/file 2013-06-25 22:32:55 22:32:55 22
+244 ::ffff:127.0.0.1 ::ffff:127.0.0.1 "WASID=B5CC8198502847D5AA3BBAE9C471701A" "127.0.0.1:8081" "" "" - POST ::ffff:127.0.0.1 500 /debug/eval/file - /debug/eval/file 2013-06-25 22:35:33 22:35:33 137430
+465 ::1 ::1 "waReferer=/index.waPage/" "localhost:8081" "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36" - GET ::1 200 /rest/$catalog/$all - /rest/$catalog/$all 2013-06-26 17:40:05 17:40:05 1372

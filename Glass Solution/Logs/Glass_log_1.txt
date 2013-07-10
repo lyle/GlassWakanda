@@ -626,3 +626,11 @@
 2013-06-25 15:33:17 [com.wakanda-software.srvr] ERROR - [42] SSL read failed, task #23811, task name is HTTP connection handler
 2013-06-25 15:35:33 [com.wakanda-software.Glass.Glass.JS4D] ERROR - [1] Unable to resolve "http"!, task #28931, task name is HTTP connection handler
 2013-06-25 15:35:33 [com.wakanda-software.Glass.Glass.JS4D] ERROR - [2] Error evaluating javascript file:///Users/ltroxell/Code/wakanda/Glass/Glass/test.js, task #28931, task name is HTTP connection handler
+2013-06-26 14:10:42 [com.wakanda-software] INFO - Stops "Glass" solution
+2013-06-26 14:10:43 [com.wakanda-software.Glass.Glass] INFO - "Glass" project stopped
+2013-06-26 14:10:45 [com.wakanda-software.Glass.ServerAdmin] INFO - "ServerAdmin" project stopped
+2013-06-26 14:10:45 [com.wakanda-software.Glass] INFO - "Glass" solution stopped
+2013-06-26 14:10:45 [com.wakanda-software] INFO - Closes "Glass" solution
+2013-06-26 14:10:45 [com.wakanda-software.Glass.Glass] INFO - "Glass" project closed
+2013-06-26 14:10:45 [com.wakanda-software.Glass.ServerAdmin] INFO - "ServerAdmin" project closed
+2013-06-26 14:10:45 [com.wakanda-software.Glass] INFO - "Glass" solution closed
