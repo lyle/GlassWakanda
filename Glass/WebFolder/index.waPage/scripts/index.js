@@ -13,6 +13,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		ds.GoogleAccess.getVisitorAuthenticationURL({
 			'onSuccess': function (event) {
  	        	document.location.href = event.result;
+ 	        	//console.log(event.result)
  	        },  
  	        'onError': function (event) {
  	        	console.log("Error");

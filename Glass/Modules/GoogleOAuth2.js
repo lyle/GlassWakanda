@@ -1,12 +1,14 @@
 var qs = require('querystring');
 
 function OAuth2(client_id, client_secret, redirect_uri, options){
+  this.options = options || {};
   this.client_id = client_id;
   this.client_secret = client_secret;
   this.redirect_uri = redirect_uri;
   this.response_type = "code";
-  this.scope = "email";
-  this.options = options || {};
+  this.scope = this.options.scope || "email";
+  this.approval_prompt = this.options.approval_prompt || "auto";
+  this.access_type = this.options.access_type || "online";
 }
 
 OAuth2.OAUTH2_URL = 'https://accounts.google.com/o/oauth2/auth';
@@ -19,6 +21,9 @@ OAuth2.prototype.getAuthenticateURL = function(option_arg){
   options.redirect_uri = this.redirect_uri;
   options.response_type = options.response_type || this.response_type;
   options.scope = options.scope || this.scope;
+  options.approval_prompt = options.approval_prompt || this.approval_prompt;
+  options.access_type = options.access_type || this.access_type;
+  
   return OAuth2.OAUTH2_URL + '?' + qs.stringify(options);
 }
 
