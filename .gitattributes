@@ -1,21 +1,2 @@
 #Autodetect text files
 * text=auto
-
-*.txt text
-*.js text
-*.json text
-*.html text
-*.css text
-*.waModel text
-*.waSettings text
-*.waPerm text
-*.md text
-*.waDirectory text
-*.waSolution text
-
-
-*.waData binary
-*.Match binary
-*.waIndex binary
-*.waSym binary
-*.waSymData binary
