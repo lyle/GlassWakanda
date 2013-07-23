@@ -50,8 +50,24 @@ OAuth2.prototype.getAccessData = function(code){
 };
 
 OAuth2.prototype.refreshAccessToken = function(refresh_token){
-  //Still need to implement this.
+  var grant_type = "refresh_token",
+  	xhr;
+  xhr = new XMLHttpRequest();
+  xhr.open('POST', OAuth2.TOKEN_URL, false);
+  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.send(
+    qs.stringify({
+      client_id: this.client_id,
+      client_secret: this.client_secret,
+      refresh_token: refresh_token, 
+      grant_type: grant_type
+    }));
+  return JSON.parse(xhr.responseText);
+  
 }
 
 exports.OAuth2 = OAuth2;
+
+
+
 
