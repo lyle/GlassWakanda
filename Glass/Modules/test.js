@@ -19,7 +19,7 @@
 function startSharedWorker(){
 	var workerM = new SharedWorker('Workers/GoogleGlassNotificationWorker.js', "GlassNote");
 	workerM.port.onmessage = function(evt){
-		console.log(evt.data);
+		//console.log(evt.data);
 	}
 	//wait();
 }

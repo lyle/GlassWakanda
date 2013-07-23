@@ -110,7 +110,7 @@ Mirror.prototype.sendMessage = function(body) {
   	xhr.send(JSON.stringify(body));
   	response = JSON.parse(xhr.responseText);
   }
-  console.log(response)
+  //console.log(response)
   
   return response;
 }

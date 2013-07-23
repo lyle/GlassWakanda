@@ -10,7 +10,7 @@ googleListener = function (GoogleAuthCode, notUsed) {
   //depending on the initial request and scope requested the returned
   //token will have different rights.
   var accessData;
-  console.log(GoogleAuthCode);
+  //console.log(GoogleAuthCode);
   
   if(GoogleAuthCode && GoogleAuthCode.length && GoogleAuthCode.length > 12){
 	accessData = OAuth2.getAccessData(GoogleAuthCode);
@@ -19,7 +19,7 @@ googleListener = function (GoogleAuthCode, notUsed) {
   	accessData.error = 'Bypassing Google Authentication';
   }
   if (accessData && accessData.error) {
-    console.log(accessData.error)
+    //console.log(accessData.error)
     return false;
   }
   
