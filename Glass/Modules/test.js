@@ -26,4 +26,7 @@ function startSharedWorker(){
 
 startSharedWorker();
 
-//ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.setting='yes'");
+ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.setting='yes'")[0];
+
+
+//new Date()

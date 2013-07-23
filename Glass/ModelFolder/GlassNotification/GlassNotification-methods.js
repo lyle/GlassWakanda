@@ -7,6 +7,7 @@ model.GlassNotification.methods.notifyAllWithMessage = function(theMessage)
 	if (message) {
 		currentSession().promoteWith('Administrator');
 		people = ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.setting='yes'");
+		
 		currentSession().unPromote();
 		
 		people.forEach(function(person){
@@ -18,7 +19,23 @@ model.GlassNotification.methods.notifyAllWithMessage = function(theMessage)
 			notification.save();
 		})
 	}
-	return 'yep';
+	return true;
 }
 
-//model.GlassNotification.methods.notifyWithMessage.scope ="public";
+/*model.GlassNotification.events.onRestrictingQuery = function()
+{
+	var sessionRef = currentSession();
+	var currentUser = sessionRef.user;
+	
+	var result = ds.GlassNotification.createEntityCollection();
+	 
+	if (sessionRef.belongsTo("Administrator")) {
+		result = ds.GlassNotification.all();
+	} else {
+		result = ds.GlassNotification.query("owner.ID = :1", currentUser.ID);
+	}
+	return result;
+};*/
+
+
+

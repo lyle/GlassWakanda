@@ -1,1 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><permissions/>
+﻿<?xml version="1.0" encoding="UTF-8"?><permissions>
+<allow action="read" groupName="User" groupID="1A7169E636684C22ACC6CEFDB80AFFF5" resource="Model.Person" temporaryForcePermissions="false" type="dataClass"/>
+<allow action="read" groupName="User" groupID="1A7169E636684C22ACC6CEFDB80AFFF5" resource="Model.GoogleAccess" temporaryForcePermissions="false" type="dataClass"/>
+</permissions>

@@ -8,9 +8,11 @@ In this file does the following:
 
 var Mirror = require('MirrorAPI').Mirror;
 
+currentSession().promoteWith('Administrator');
 
 function sendNotifications(){
   	//count ++;
+		
   	var notifications = ds.GlassNotification.query('sentAt == null');
   	notifications.forEach(function(notification){
   		var mir = new Mirror(notification.owner.GoogleAccess);

@@ -1,16 +1,15 @@
 model.GoogleAccess = new DataClass("GoogleAccessCollection" ,"public");
-
 model.GoogleAccess.ID = new Attribute("storage", "string", "key");
-
 model.GoogleAccess.person = new Attribute("relatedEntities", "People", "GoogleAccess", {
 	"reversePath": true
 });
-
-model.GoogleAccess.access_token = new Attribute("storage", "string");
-
+model.GoogleAccess.access_token = new Attribute("storage", "string",{
+	scope:"publicOnServer"
+});
 model.GoogleAccess.token_type = new Attribute("storage", "string");
-
-model.GoogleAccess.refresh_token = new Attribute("storage", "string");
+model.GoogleAccess.refresh_token = new Attribute("storage", "string",{
+	scope:"publicOnServer"
+});
 
 model.GoogleAccess.created_at = new Attribute("storage", "date", null, {
 	"simpleDate": false

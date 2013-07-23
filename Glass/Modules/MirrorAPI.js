@@ -21,6 +21,41 @@ Mirror.prototype.postHTMLMessage = function(htmlMessage, options){
   return this.sendMessage(to_post);
 }
 
+Mirror.prototype.deleteItem = function(itemId){
+	var response, xhr, auth;
+	xhr = new XMLHttpRequest();
+	auth = 'Bearer ' + this.GoogleAccess.access_token;
+	xhr.open('DELETE', this.url + "/" + itemId);
+	xhr.setRequestHeader('Authorization', auth);
+	xhr.setRequestHeader('Content-Type','application/json');
+	xhr.send();
+	
+	return xhr.responseText;
+}
+
+Mirror.prototype.listItems = function(){
+	var response, xhr, auth;
+	xhr = new XMLHttpRequest();
+	auth = 'Bearer ' + this.GoogleAccess.access_token;
+	xhr.open('GET', this.url);
+	xhr.setRequestHeader('Authorization', auth);
+	xhr.setRequestHeader('Content-Type','application/json');
+	xhr.send();
+	response = JSON.parse(xhr.responseText);
+  
+	if (response && response.error && response.error.code == 401){
+		//401 is "Invalid Credentials"
+		//need to refresh access token probably
+		xhr = new XMLHttpRequest();
+		auth = 'Bearer ' + this.GoogleAccess.getRefreshedAccessToken();
+		xhr.open('GET', this.url);
+		xhr.setRequestHeader('Authorization', auth);
+		xhr.setRequestHeader('Content-Type','application/json');
+		xhr.send();
+		response = JSON.parse(xhr.responseText);
+  	}
+  	return response;
+}
 Mirror.prototype.postTextImageMessage = function(textMessage, imageURL, options){
   var options = options || {};
   var to_post = {};
