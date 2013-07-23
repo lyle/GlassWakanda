@@ -13,4 +13,15 @@ Done:
 
 
 
+
 -Lyle
+
+###Install###
+
+* Clone this repo to a local machine or server
+* Use the [Google Code API Console](http://code.google.com) to create and API Project
+  * It will need Google Mirror API access and Google+ API access
+  * If running locally simply use "http://localhost:8081/login" for the redirect URL
+* Copy <code>./Glass/Modules/GoogleOAuthSecret_example.js</code> to <code>./Glass/Modules/GoogleOAuthSecret.js</code>
+  * And update those settings to match the stuff from your Google API Project
+* Start Wakanda poiting to this solution.
