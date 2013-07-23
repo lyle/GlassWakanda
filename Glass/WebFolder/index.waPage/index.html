@@ -6,23 +6,32 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 	<meta name="wakanda-version" content="5 build 5.137042"/>
 	<meta name="wakanda-build" content="5.137042"/>
+    <meta name="WAF.config.modules" content="dataprovider"/>
 	<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
 	<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 	<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 	<meta name="WAF.catalog" content="Person, GoogleAccess"/>
+	<script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
 
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Person" data-lib="WAF" data-id="person" data-dataType="string" data-autoLoad="false" content="person"/>
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="scalar" data-source="people" data-lib="WAF" data-id="people" data-dataType="string" data-autoLoad="true" content="people"/>
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Person" data-lib="WAF" data-id="person1" data-dataType="string" data-autoLoad="true" content="person1"/></head>
-
-<body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="lilac" data-rpc-validation="false" data-rpc-namespace="rpc" data-rpc-activate="false" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="visibility:hidden;bottom:;right:;">
-	<button id="GoogleLogin" data-type="button" data-text="Google Login" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-action="simple" class="waf-widget waf-button "></button>
+<body>
 	<div id="userProfile">
 		<img src="" class="uPic"/>
 		<h3 class="uName"></h3>
 		<button class="logout">Log Out</button>
 	</div>
-		<div id="richText1" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-left="true" data-binding="person.fullName" data-autoWidth="false" class="waf-widget waf-richText "></div>
-		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
+  <div id="introduction">
+    <h1>Wakanda a Full Stack Web Development Solution</h1>
+    <p>Howdy, this demo app is built on <a href="http://wakandadb.org/">wakandaDB</a>  a JavaScript based Database and Webserver.</p>
+    <p>The source code for <a href="http://github.com/lyle/GlassWakanda">glass.wakanda.org can be found on Github</a>.</p>
+
+  	<button id="GoogleLogin" value="button">Login Using Google</button>
+  </div>
+  <div id="welcome">
+    <h1>Welcome, thanks for Loging in</h1>
+    <p>This is to demonstrate <a href="http://wakandadb.org/">wakandaDB</a> a JavaScript based Database and Webserver.</p>
+    
+  </div>
+  <script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>
 </html>

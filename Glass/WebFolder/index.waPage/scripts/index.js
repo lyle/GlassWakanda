@@ -23,27 +23,28 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-			
-			$('#userProfile').hide();
+		
+		  $('#userProfile').hide();
+			$('#welcome').hide();
 			ds.Person.getCurrentPerson({
 				onSuccess:function(event){
 					if (event.result && event.result.error){
 						console.log(event.result.errorMessage);
 					}else{
-						$('#GoogleLogin').hide();
+						$('#introduction').hide();
+            $('#welcome').show();
 						$('#userProfile').show();
-						sources.person.addEntity(event.result);
 						$('#userProfile .uName').html(event.result.fullName.value);
 						$('#userProfile .uPic').attr('src', event.result.picture.value);
 						$('#userProfile button.logout').click(function(event){
 							WAF.directory.logout({
 								onSuccess: function(){
-									sources.person.setEntityCollection();
 									$('#GoogleLogin').show();
 									$('#userProfile').hide();
+                  $('#welcome').hide();
+                  $('#introduction').show();
 								}
 							});
-							
 						});
 					}
 				},onError:function(event){
