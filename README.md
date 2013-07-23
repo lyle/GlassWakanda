@@ -9,8 +9,13 @@ Goal:
 
 Done: 
 * Wakanda supporting Oath2 handshake with Google to give Wakanda approval to use Google APIs.
+* Oauth2 with refresh token support
 * The ability for Wakanda to send timeline cards
 
+Todo:
+* Refactor how refresh token gets used. 
+  Currently each API would require a "try if error from OAuth use refresh token and try again" step - which is really messy.
+  I think having a request handler that encapsulates the refresh token step makes sense.
 
 
 
