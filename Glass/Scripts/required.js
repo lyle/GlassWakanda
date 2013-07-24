@@ -35,7 +35,7 @@ googleListener = function (GoogleAuthCode, notUsed) {
       ID: userInfo.id
     });
     googleAccess.save();
-    person = ds.Person.find("email = :1", userInfo.email);
+    person = ds.Person.find("emailHash = :1", directory.computeHA1(userInfo.email));
     
     if (!person) {
     	person = new ds.Person();

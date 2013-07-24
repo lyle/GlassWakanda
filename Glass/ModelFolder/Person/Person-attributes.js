@@ -22,4 +22,9 @@ model.Person.fullName.onSet = function(value) {
 model.Person.fullName.onGet = function() { 
     return this.firstName + " " + this.lastName;
 }
+model.Person.emailHash = new Attribute("storage", "string");
+
+model.Person.email.addEventListener("onSave", function(attributeName){
+	this.emailHash = directory.computeHA1(this.email);
+})
 

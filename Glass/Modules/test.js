@@ -39,5 +39,10 @@ person = ds.Person.find("ID=269EA08067D64ECEAA14BA6343748B90")
 //gS = ds.Person.find("ID=269EA08067D64ECEAA14BA6343748B90").GlassSettings[0];
 //gS.createGlassContact();
 //new Date()
-directory.computeHA1("troxell@gmail.com");
+//directory.computeHA1("troxell@gmail.com");
 			//currentSession().checkPermission('Admin');
+//person.emailHash + " " + directory.computeHA1("****")
+
+person.email = "troxell@gmail.com";
+person.save();
+person.emailHash;
