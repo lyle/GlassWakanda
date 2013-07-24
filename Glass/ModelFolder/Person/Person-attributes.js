@@ -22,3 +22,4 @@ model.Person.fullName.onSet = function(value) {
 model.Person.fullName.onGet = function() { 
     return this.firstName + " " + this.lastName;
 }
+

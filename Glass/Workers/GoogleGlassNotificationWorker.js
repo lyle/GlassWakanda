@@ -1,54 +1,55 @@
-﻿/*
-In this file does the following:
-1) find all of the notificaitons
-2) Send notifications to each user
-3) Wait 10seconds
-5) Do it again.
-*/
-
-var Mirror = require('MirrorAPI').Mirror;
+﻿var Mirror = require('MirrorAPI').Mirror;
 
 currentSession().promoteWith('Administrator');
 
 function sendNotifications(){
   	//count ++;
-		
+	
   	var notifications = ds.GlassNotification.query('sentAt == null');
   	notifications.forEach(function(notification){
   		var mir = new Mirror(notification.owner.GoogleAccess);
-  		mir.postHTMLMessage(notification.message, {"bundleId":"GlasswakandaDB"});
-  		notification.sentAt = new Date();
-  		notification.save();
-  		
+  		var respons = mir.postHTMLMessage(notification.message, {"bundleId":"GlassWakandaBundle"});
+  		if(respons && respons.error) {
+  			//some sort of error
+  			errorCount ++;
+  			console.log("worker error:" + JSON.stringify(respons));
+  		}else{
+	  		notification.sentAt = new Date();
+	  		notification.save();
+	  		//console.log(notification.message);
+	  	}
   	});
+  	//console.log("Glass Notify Worker :" + count)
   	//close();
-  	if (count > 0) {
-  		console.log("closing");
-  		close();
-  	}
-  	setTimeout(sendNotifications, 10000);
+  	if (notify && errorCount < 10){
+	  	setTimeout(sendNotifications, 10000);
+	}
 }
   
   
 onconnect = function(event) {  
   var thePort = event.ports[0];
-  thePort.postMessage({ref:'hello'});
-
+  thePort.postMessage({"sendNotifications":notify});
   thePort.onmessage = function(message){
     var data = message.data;
     
-    switch (data.type)
+    switch (data.command)
     {
       case 'start':
-      	
+  		console.log("starting worker");
+  		errorCount=0;
+        notify = true;
+		sendNotifications();
         break;
       case 'shutdown':
-        close();
+  		console.log("shutdown worker");
+        notify = false;
         break;
     }
   }
-  
+     	
 }
-var count = 0;
+console.log("loading worker");
+var notify = false;
+var errorCount = 0;
 
-sendNotifications();

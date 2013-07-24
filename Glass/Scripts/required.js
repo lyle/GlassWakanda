@@ -35,13 +35,16 @@ googleListener = function (GoogleAuthCode, notUsed) {
       ID: userInfo.id
     });
     googleAccess.save();
+    person = ds.Person.find("email = :1", userInfo.email);
     
-    person = new ds.Person({
-      firstName:userInfo.given_name,
-      lastName:userInfo.family_name,
-      email:userInfo.email,
-      GoogleAccess:googleAccess
-    });
+    if (!person) {
+    	person = new ds.Person();
+	}
+	person.firstName= userInfo.given_name;
+    person.lastName= userInfo.family_name;
+    person.email= userInfo.email;
+    person.GoogleAccess= googleAccess;
+    
     person.save();
     googleAccess.refresh();
     
@@ -53,7 +56,7 @@ googleListener = function (GoogleAuthCode, notUsed) {
 	 }
   	notifyMessage += '</figure>';
   	notifyMessage += '<section><h1>' + person.fullName + "</h1>";
-  	notifyMessage += 'has authenticated<br/>Glass wakandaDB</section></article>';
+  	notifyMessage += 'has authenticated<br/>Glass Wakanda</section></article>';
     
     var tmp = ds.GlassNotification.notifyAllWithMessage(notifyMessage);
   }

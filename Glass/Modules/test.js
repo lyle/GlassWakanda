@@ -24,9 +24,20 @@ function startSharedWorker(){
 	//wait();
 }
 
-startSharedWorker();
+//startSharedWorker();
+
+currentSession().promoteWith('RealAdmin');
 
 ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.setting='yes'")[0];
-
-
+person = ds.Person.find("email = :1", "troxell@gmail.com");
+//if (! person) {
+	//person = new ds.Person();
+//}
+//currentSession().promoteWith('Admin');
+person = ds.Person.find("ID=269EA08067D64ECEAA14BA6343748B90")
+//currentSession().promoteWith('Admin');
+//gS = ds.Person.find("ID=269EA08067D64ECEAA14BA6343748B90").GlassSettings[0];
+//gS.createGlassContact();
 //new Date()
+directory.computeHA1("troxell@gmail.com");
+			//currentSession().checkPermission('Admin');

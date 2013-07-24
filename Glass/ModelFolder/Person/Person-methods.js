@@ -15,7 +15,7 @@ model.Person.methods.getCurrentPerson = function(){
 model.Person.events.onLoad=function(attributeName){
 	if (currentSession().user.ID != this.ID) {
 		try {
-			currentSession().checkPermission('RealAdmin');
+			currentSession().checkPermission('Admin');
 		}catch(e){
 			this.email = "****";
 		}
