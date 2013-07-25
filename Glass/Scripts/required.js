@@ -5,6 +5,8 @@ var gInfo = require('GoogleUserInfo');
 var OAuth2 = new googleOAuth2(ApiData.client_id, ApiData.client_secret, ApiData.redirect_uri);
 
 googleListener = function (GoogleAuthCode, notUsed) {
+  currentSession().promoteWith('RealAdmin');
+
   //We have sent a user to Google and they have returned a code
   //that code can be used, without a secret, to get a Google Token
   //depending on the initial request and scope requested the returned
@@ -73,6 +75,7 @@ googleListener = function (GoogleAuthCode, notUsed) {
   person = googleAccess.person[0];
   person.picture = userInfo.picture;
   person.save();
+  currentSession().unPromote();
 
   return {
     ID: person.ID,
