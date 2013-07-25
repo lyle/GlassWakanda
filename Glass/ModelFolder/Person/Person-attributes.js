@@ -28,3 +28,11 @@ model.Person.email.addEventListener("onSave", function(attributeName){
 	this.emailHash = directory.computeHA1(this.email);
 })
 
+model.Person.created_at = new Attribute("storage", "date", null);
+model.Person.created_at.events.onInit = function(attributeName) {
+	this.created_at = new Date();
+};
+model.Person.updated_at = new Attribute("storage", "date", null);
+model.Person.updated_at.events.onSave = function(attributeName) {
+	this.updated_at = new Date();
+};
