@@ -11,7 +11,13 @@ model.Person.methods.getCurrentPerson = function(){
 		return ds.Person({ID:user.ID});
 	}
 };
-
+model.Person.methods.getAllPeeopls = function(){
+	var res ;
+	currentSession().promoteWith('User');
+	res = ds.Person.all();
+	currentSession().unPromote();
+	return res;
+}
 model.Person.events.onLoad=function(attributeName){
 	if (currentSession().user.ID != this.ID) {
 		try {
@@ -24,6 +30,8 @@ model.Person.events.onLoad=function(attributeName){
 
 
 model.Person.methods.getCurrentPerson.scope ="public";
+
+model.Person.methods.getAllPeeopls.scope ="public";
 
 
 
