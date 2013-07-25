@@ -31,7 +31,7 @@ model.Person.events.onLoad=function(attributeName){
 
 model.Person.methods.getCurrentPerson.scope ="public";
 
-model.Person.methods.getAllPeeopls.scope ="public";
+//model.Person.methods.getAllPeeopls.scope ="public";
 
 
 
