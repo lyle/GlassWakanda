@@ -17,8 +17,16 @@ model.Person.methods.signedUpOnDate = function(queryDate){
   	  queryDate = new Date(queryDate);
   	}
 	var res ;
+	currentSession().promoteWith('RealAdmin');
+	res = ds.Person.all();//"created_at = :1", queryDate);
+	currentSession().unPromote();
+	return res;
+}
+
+model.Person.methods.getAllPeeopls = function(){
+	var res ;
 	currentSession().promoteWith('User');
-	res = ds.Person.query("created_at = :1", queryDate);
+	res = ds.Person.all();
 	currentSession().unPromote();
 	return res;
 }
@@ -56,7 +64,7 @@ model.Person.methods.getCurrentPerson.scope ="public";
 model.Person.methods.signedUpOnDate.scope ="public";
 model.Person.methods.updateEmailHash.scope ="public";
 
-//model.Person.methods.signedUpToday.scope ="public";
+model.Person.methods.getAllPeeopls.scope ="public";
 
 
 
