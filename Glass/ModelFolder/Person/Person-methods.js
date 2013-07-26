@@ -17,7 +17,7 @@ model.Person.methods.signedUpOnDate = function(queryDate){
   	  queryDate = new Date(queryDate);
   	}
 	var res ;
-	currentSession().promoteWith('RealAdmin');
+	currentSession().promoteWith('User');
 	res = ds.Person.all();//"created_at = :1", queryDate);
 	currentSession().unPromote();
 	return res;
