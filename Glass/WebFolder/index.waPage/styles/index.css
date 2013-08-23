@@ -1,1 +1,38 @@
-﻿
+﻿body {
+  font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+.introduction, .footer, .header {
+  width: 600px;
+  margin:auto;
+}
+.header {
+  text-align: center;
+}
+.header .tagline {
+  font-size: 110%;
+}
+.header h1 div {
+
+  float: left;
+  width: 45%;
+  margin:0px;
+  font-size: 2em;
+}
+.header .wakanda {
+  
+}
+.header .glass {
+  
+}
+
+.introduction p ,hr {clear:both;text-align:center;}
+
+.footer .altlogin, .footer .glasslogin{
+  display:inline-block;
+  margin:0px;
+  width:45%;
+  float:left;
+}
+.footer .glasslogin {
+  text-align:right;
+}

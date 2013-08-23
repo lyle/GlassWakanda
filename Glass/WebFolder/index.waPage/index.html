@@ -11,18 +11,35 @@
 	<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 	<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 	<meta name="WAF.catalog" content="Person, GoogleAccess"/>
+  <link rel="stylesheet" href="/lib/fork-ribbon/gh-fork-ribbon.css" />
+  <!--[if IE]>
+      <link rel="stylesheet" href="/lib/fork-ribbon/gh-fork-ribbon.ie.css" />
+  <![endif]-->
 	<script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
-
 <body>
-	<div id="userProfile">
-		<img src="" class="uPic"/>
-		<h3 class="uName"></h3>
-		<button class="logout">Log Out</button>
-	</div>
-  <div id="introduction">
-    <h1>Wakanda a Full Stack Web Development Solution</h1>
-    <p>Howdy, this demo app is built on <a href="http://wakandadb.org/">wakandaDB</a>  a JavaScript based Database and Webserver.</p>
+  <div class="header">
+    <p class="demo">A Demonstration Application Built with <a href="http://wakandadb.org/">wakandaDB</a></p>
+    <h1><div class="glass">Glass</div> <div class="wakanda">Wakanda</div></h1>
+    <p class="tagline">Reconnect with strangers you met through Google Glass</p>
+    
+  </div>
+  <div class="content">
+    <div id="userProfile">
+      <img src="" class="uPic"/>
+      <h3 class="uName"></h3>
+      <button class="logout">Log Out</button>
+    </div>
+  <div id="introduction" class="introduction">
+    
+    
+    <hr>
+    <div>
+      <h2>Hey! I met someone with Glass...</h2>
+      <p>When you met the person with Glass were pictures taken? You can login to this app to get access to the pictures and connect with the Glass explorer.</p>
+      <button id="GoogleLogin" value="button">Login Using Google</button> <span class="note">or login by giving .</span>
+    </div>
+    <p>Howdy, this demo app is built on   a JavaScript based Database and Webserver.</p>
     <p>The source code for <a href="http://github.com/lyle/GlassWakanda">glass.wakanda.org can be found on Github</a>.</p>
 
   	<button id="GoogleLogin" value="button">Login Using Google</button>
@@ -33,6 +50,16 @@
     <h1>Welcome, thanks for Loging in</h1>
     <p>This is to demonstrate <a href="http://wakandadb.org/">wakandaDB</a> a JavaScript based Database and Webserver.</p>
     
+  </div>
+  
+</div>
+
+<div class="footer"><div class="altlogin"><a href='/NewPerson'>login with email</a></div> <div class="glasslogin"><a href="/glass">Glass Explorers</a></div></div>
+  
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="http://github.com/lyle/GlassWakanda">Fork me on GitHub</a>
+      </div>
   </div>
   <script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>
