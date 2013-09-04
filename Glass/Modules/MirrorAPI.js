@@ -96,8 +96,14 @@ Mirror.prototype.deleteItem = function(itemId){
 	return xhr.responseText;
 }
 
-Mirror.prototype.listItems = function(){
+Mirror.prototype.listItems = function(options){
 	var response, xhr, auth;
+	var options = options || {};
+	options.maxResults = options.maxResults || 10;
+	this.url += "?maxResults=" + options.maxResults;
+	if(options.pageToken){
+		this.url += "&pageToken=" + options.pageToken;
+	}
 	xhr = new XMLHttpRequest();
 	auth = 'Bearer ' + this.GoogleAccess.access_token;
 	xhr.open('GET', this.url);
