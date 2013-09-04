@@ -100,3 +100,35 @@ function list(request, response)
 	}  
 }
 
+function deleteItem(request, response)
+{
+  var currentUser = currentSession().user;
+  var user= ds.Person.find("ID=:1", currentUser.ID);
+  var mir = new Mirror(user.GoogleAccess);
+  response.contentType = 'text/html';
+  var theQuery = getURLQuery(request.url);
+  		
+	if (!user || !theQuery.id) {
+		response.body = "<html><body>Problem</body></html>";
+
+	}else{
+		var mir = new Mirror(user.GoogleAccess);
+  		
+		var delResponse = mir.deleteItem(theQuery.id);
+		
+		var template = "{{#no-response}} Mirror Item Deleted {{/no-response}}";
+		var res = '<html><head><script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script><link rel="stylesheet" href="/lib/glass_base_style.css" /></head><body>';
+  		res += mus.to_html(template, delResponse);
+  		res += "<div style='margin-top: 360px;'>Version of Wakanda:";
+  		res += process.version;
+  		res += "</div>";
+  		res += "<script>$( document ).ready(function() {$('body article').on('click', function(){this.parentNode.appendChild(this);})})</script>";
+  		res += '<script>console.log('+JSON.stringify(delResponse)+')</script>';
+  		
+  		res += "</body></html>";
+  
+		response.body = res;
+	
+	}  
+}
+

@@ -13,5 +13,6 @@ addHttpRequestHandler("^/glassListContactItems", "Scripts/GoogleMirror.js",  "li
 
 addHttpRequestHandler("^/startWorker", "Scripts/workerControl.js",  "startWorker");
 addHttpRequestHandler("^/stopWorker", "Scripts/workerControl.js",  "stopWorker");
-//addHttpRequestHandler("^/GoogleMirrorList", "Scripts/GoogleMirror.js",  "list");
+addHttpRequestHandler("^/GoogleMirrorList", "Scripts/GoogleMirror.js",  "list");
+addHttpRequestHandler("^/GoogleMirrorDeleteItem", "Scripts/GoogleMirror.js",  "deleteItem");
 //addHttpRequestHandler("^/GoogleMirrorPost", "Scripts/GoogleMirror.js",  "post");

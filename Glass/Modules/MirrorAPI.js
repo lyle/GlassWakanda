@@ -85,15 +85,7 @@ Mirror.prototype.postHTMLMessage = function(htmlMessage, options){
 }
 
 Mirror.prototype.deleteItem = function(itemId){
-	var response, xhr, auth;
-	xhr = new XMLHttpRequest();
-	auth = 'Bearer ' + this.GoogleAccess.access_token;
-	xhr.open('DELETE', this.url + "/" + itemId);
-	xhr.setRequestHeader('Authorization', auth);
-	xhr.setRequestHeader('Content-Type','application/json');
-	xhr.send();
-	
-	return xhr.responseText;
+	return this.submitWithRefreshAuth('DELETE', this.url + "/" + itemId, null, true)
 }
 
 Mirror.prototype.listItems = function(options){
