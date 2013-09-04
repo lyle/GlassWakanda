@@ -24,7 +24,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 		
-		  $('#userProfile').hide();
+		  	$('#userProfile').hide();
 			$('#welcome').hide();
 			ds.Person.getCurrentPerson({
 				onSuccess:function(event){
@@ -32,7 +32,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 						console.log(event.result.errorMessage);
 					}else{
 						$('#introduction').hide();
-            $('#welcome').show();
+            			$('#welcome').show();
 						$('#userProfile').show();
 						$('#userProfile .uName').html(event.result.fullName.value);
 						$('#userProfile .uPic').attr('src', event.result.picture.value);
@@ -41,8 +41,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 								onSuccess: function(){
 									$('#GoogleLogin').show();
 									$('#userProfile').hide();
-                  $('#welcome').hide();
-                  $('#introduction').show();
+                  					$('#welcome').hide();
+                  					$('#introduction').show();
 								}
 							});
 						});
