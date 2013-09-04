@@ -85,7 +85,7 @@ Mirror.prototype.postHTMLMessage = function(htmlMessage, options){
 }
 
 Mirror.prototype.deleteItem = function(itemId){
-	return this.submitWithRefreshAuth('DELETE', this.url + "/" + itemId, null, true)
+	return this.submitWithRefreshAuth('DELETE', this.url + "/" + itemId, null, true);
 }
 
 Mirror.prototype.listItems = function(options){
@@ -96,26 +96,7 @@ Mirror.prototype.listItems = function(options){
 	if(options.pageToken){
 		this.url += "&pageToken=" + options.pageToken;
 	}
-	xhr = new XMLHttpRequest();
-	auth = 'Bearer ' + this.GoogleAccess.access_token;
-	xhr.open('GET', this.url);
-	xhr.setRequestHeader('Authorization', auth);
-	xhr.setRequestHeader('Content-Type','application/json');
-	xhr.send();
-	response = JSON.parse(xhr.responseText);
-  
-	if (response && response.error && response.error.code == 401){
-		//401 is "Invalid Credentials"
-		//need to refresh access token probably
-		xhr = new XMLHttpRequest();
-		auth = 'Bearer ' + this.GoogleAccess.getRefreshedAccessToken();
-		xhr.open('GET', this.url);
-		xhr.setRequestHeader('Authorization', auth);
-		xhr.setRequestHeader('Content-Type','application/json');
-		xhr.send();
-		response = JSON.parse(xhr.responseText);
-  	}
-  	return response;
+	return this.submitWithRefreshAuth('GET', this.url, null, true);
 }
 Mirror.prototype.postTextImageMessage = function(textMessage, imageURL, options){
   var options = options || {};
