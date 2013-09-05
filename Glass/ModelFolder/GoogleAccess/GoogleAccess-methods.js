@@ -15,6 +15,9 @@ var OAuth2Glass = new OAuth(glassApiData.client_id,
 		approval_prompt:glassApiData.approval_prompt,
 		access_type:"offline"
 	});
+model.GoogleAccess.methods.getVerifyTokenSecret = function(){
+	return glassApiData.verifyToken;
+};
 model.GoogleAccess.methods.getVisitorAuthenticationURL = function(){
 		return OAuth2.getAuthenticateURL();
 };
