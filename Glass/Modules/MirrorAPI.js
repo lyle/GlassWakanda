@@ -81,7 +81,8 @@ Mirror.prototype.postHTMLMessage = function(htmlMessage, options){
   if (options.bundleId) {
   	to_post.bundleId = options.bundleId;
   }
-  return this.sendMessage(to_post);
+  return this.submitWithRefreshAuth('POST', this.url, JSON.stringify(to_post), true);
+
 }
 
 Mirror.prototype.deleteItem = function(itemId){
@@ -107,12 +108,16 @@ Mirror.prototype.postTextImageMessage = function(textMessage, imageURL, options)
   to_post.html +=   textMessage;
   to_post.html += '</p></section></article>';
   to_post.menuItems = options.menuItems || this.card.menuItems;
+  if(textMessage.length > 30) {
+  	to_post.speakableText = textMessage;
+    to_post.menuItems.push({action:'READ_ALOUD'});
+  }
   to_post.notification = options.notification || this.card.notification;
   if (options.bundleId) {
   	to_post.bundleId = options.bundleId;
   }
-  return to_post;
-  //return this.sendMessage(to_post);
+
+  return this.submitWithRefreshAuth('POST', this.url, JSON.stringify(to_post), true);
 }
 
 Mirror.prototype.postTextMessage = function(textMessage, options) {
@@ -125,38 +130,9 @@ Mirror.prototype.postTextMessage = function(textMessage, options) {
   if (options.bundleId) {
   	to_post.bundleId = options.bundleId;
   }
-  return this.sendMessage(to_post);
+  
+  return this.submitWithRefreshAuth('POST', this.url, JSON.stringify(to_post), true);
 }
-
-
-Mirror.prototype.sendMessage = function(body) {
-  var auth;
-  var response;
-  
-  xhr = new XMLHttpRequest();
-  auth = 'Bearer ' + this.GoogleAccess.access_token;
-  xhr.open('POST', this.url);
-  xhr.setRequestHeader('Authorization', auth);
-  xhr.setRequestHeader('Content-Type','application/json');
-  xhr.send(JSON.stringify(body));
-  response = JSON.parse(xhr.responseText);
-  
-  if (response && response.error && response.error.code == 401){
-  	//401 is "Invalid Credentials"
-  	//need to refresh access token probably
-  	xhr = new XMLHttpRequest();
-  	var auth = 'Bearer ' + this.GoogleAccess.getRefreshedAccessToken();
-  	xhr.open('POST', this.url);
-  	xhr.setRequestHeader('Authorization', auth);
-  	xhr.setRequestHeader('Content-Type','application/json');
-  	xhr.send(JSON.stringify(body));
-  	response = JSON.parse(xhr.responseText);
-  }
-  //console.log(response)
-  
-  return response;
-}
-
 
 
 exports.Mirror = Mirror;
