@@ -8,6 +8,20 @@ function Mirror(GoogleAccess, options){
   this.GoogleAccess = GoogleAccess;
   this.url = 'https://www.googleapis.com/mirror/v1/timeline';
   this.contactsUrl = 'https://www.googleapis.com/mirror/v1/contacts';
+  this.subscriptionsUrl = 'https://www.googleapis.com/mirror/v1/subscriptions';
+  this.callbackUrl = "https://glass.wakanda.org/fromMirrorApi";
+}
+Mirror.prototype.listSubscriptions = function(){
+  return this.submitWithRefreshAuth('GET',this.subscriptionsUrl, null, true);
+}
+Mirror.prototype.addSubscription = function(options){
+  var body = {};
+  body.callbackUrl = options.callbackUrl || this.callbackUrl;
+  body.collection = options.collection || "timeline";
+  body.operation = options.opperation || ['UPDATE','INSERT','DELETE'];
+  body.userToken = this.GoogleAccess.ID;
+  body.verifyToken = GoogleAccess.getVerifyTokenSecret();
+  return this.submitWithRefreshAuth('POST',this.subscriptionsUrl, body, true);
 }
 Mirror.prototype.listContacts = function(){
   return this.submitWithRefreshAuth('GET', this.contactsUrl, null, true);
@@ -30,13 +44,14 @@ Mirror.prototype.addContact = function(contactID, displayName, imageUrlArray){
   		this.contactsUrl,
   		JSON.stringify(contact), true);
 }
-Mirror.prototype.updateContact = function(contactID, displayName, imageUrlArray){
+Mirror.prototype.updateContact = function(contactID, displayName, imageUrlArray, options){
   var contact ={};
+  options = options || {};
   contact.id = contactID;
   contact.displayName = displayName;
   contact.imageUrls = imageUrlArray;
-  contact.priority = 7;
-  contact.type = "GROUP";
+  contact.priority = options.priority || 7;
+  contact.type = options.type || "GROUP";
   
   return this.submitWithRefreshAuth('PUT',
   		this.contactsUrl + "/" + contactID,
