@@ -33,4 +33,6 @@ model.GoogleAccess.updated_at.events.onSave = function(attributeName) {
 	this.updated_at = new Date();
 };
 
-
+model.GoogleAccess.glassLogs = new Attribute("relatedEntities", "GlassLogs", "GoogleAccess", {
+	"reversePath": true
+});
