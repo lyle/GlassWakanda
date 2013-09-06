@@ -26,6 +26,7 @@ model.GoogleAccess.methods.getGlassAuthenticationURL = function(){
 };
 model.GoogleAccess.methods.getVisitorAuthenticationURL.scope ="public";
 model.GoogleAccess.methods.getGlassAuthenticationURL.scope ="public";
+model.GoogleAccess.methods.getVerifyTokenSecret.scope = "publicOnServer";
 
 model.GoogleAccess.entityMethods.getRefreshedAccessToken = function (){
 	var newTokenSet;

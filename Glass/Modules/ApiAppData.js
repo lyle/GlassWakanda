@@ -7,7 +7,9 @@ exports.glassUser = {
 	client_secret : googleOAuthSecret.client_secret,
 	response_type : "code",
 	redirect_uri : googleOAuthSecret.redirect_uri,
-	approval_prompt: "force"};
+	approval_prompt: "force",
+	verifyToken: googleOAuthSecret.verifyToken
+};
 
 exports.user = {
 	client_id : googleOAuthSecret.client_id,

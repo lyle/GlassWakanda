@@ -1,6 +1,29 @@
 ﻿var Mirror = require('MirrorAPI').Mirror;
 var mus = require("mustache");
 
+function subscriptionCallBack(request, response){
+	
+	response.contentType = 'application/json';
+	
+	//request.remoteAddress
+	
+	
+	
+	log = ds.GlassLog.createEntity(); 
+	log.request = JSON.stringify(request);
+	log.response = 'ok';
+	log.orig = "subscritionCallBack at " + Date.now() + ' remote:' + request.remoteAddress;
+	log.save();
+	
+	response.body = JSON.stringify({"response":"ok"});
+	
+	//save image and process request
+	
+	//respond correctly to google
+	
+	//update timeline? - maybe we need a worker to processes a log for this
+}
+
 function listItems(request, response){
 	var currentUser = currentSession().user;
 	var user= ds.Person.find("ID=:1", currentUser.ID);
@@ -83,14 +106,15 @@ function list(request, response)
   		
 		var currentItems = mir.listItems(options);
 
-		var template = "{{#items}} {{{html}}} {{/items}}";
+		var template = "<div class='content'>{{#items}} <div id='{{id}}'><ul><li><a href='/GoogleMirrorDeleteItem?id={{id}}'>delete</a></li><li>created:{{created}}</li><li>{{kind}}</li></ul>{{{html}}}</div> {{/items}}</div>";
 		var res = '<html><head><script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script><link rel="stylesheet" href="/lib/glass_base_style.css" /></head><body>';
   		res += mus.to_html(template, currentItems);
-  		res += "<div style='margin-top: 360px;'>Version of Wakanda:";
+  		res += "<div id='pager'>Version of Wakanda:";
   		res += process.version;
   		res += '<a href="'+getURLPath(request.url).join("/")+'?pageToken='+currentItems.nextPageToken+'">next</a>';
   		res += "</div>";
-  		res += "<script>$( document ).ready(function() {$('body article').on('click', function(){this.parentNode.appendChild(this);})})</script>";
+  		res += "<style>.content{margin-top:2em;}#pager{padding:.2em;position:fixed;top:0px;background-color:black;color:white;height:1em;margin:0px;}div{position:relative;width:900px;height:380px;margin:2px;}article{position:relative}ul{clear:both;padding:5px;float:right}body{margin:0;padding:0px;</style>";
+  		//res += "<script>$( document ).ready(function() {$('body article').on('click', function(){this.parentNode.parentNode.appendChild(this.parentNode);})})</script>";
   		res += '<script>console.log('+JSON.stringify(currentItems)+')</script>';
   		
   		res += "</body></html>";

@@ -1,5 +1,4 @@
 ﻿
-
 function Mirror(GoogleAccess, options){
   this.options = options || {};
   this.card = {};
@@ -14,14 +13,19 @@ function Mirror(GoogleAccess, options){
 Mirror.prototype.listSubscriptions = function(){
   return this.submitWithRefreshAuth('GET',this.subscriptionsUrl, null, true);
 }
+Mirror.prototype.deleteSubscription = function(subscriptionID){
+  var url = this.subscriptionsUrl + "/" + subscriptionID;
+  return this.submitWithRefreshAuth('DELETE',url, null, true);
+}
 Mirror.prototype.addSubscription = function(options){
   var body = {};
+  options = options || {};
   body.callbackUrl = options.callbackUrl || this.callbackUrl;
   body.collection = options.collection || "timeline";
   body.operation = options.opperation || ['UPDATE','INSERT','DELETE'];
   body.userToken = this.GoogleAccess.ID;
-  body.verifyToken = GoogleAccess.getVerifyTokenSecret();
-  return this.submitWithRefreshAuth('POST',this.subscriptionsUrl, body, true);
+  body.verifyToken = ds.GoogleAccess.getVerifyTokenSecret();
+  return this.submitWithRefreshAuth('POST',this.subscriptionsUrl, JSON.stringify(body), true);
 }
 Mirror.prototype.listContacts = function(){
   return this.submitWithRefreshAuth('GET', this.contactsUrl, null, true);

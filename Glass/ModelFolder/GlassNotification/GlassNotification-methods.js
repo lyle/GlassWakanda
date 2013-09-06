@@ -6,7 +6,7 @@ model.GlassNotification.methods.notifyAllWithMessage = function(theMessage)
 	
 	if (message) {
 		currentSession().promoteWith('Administrator');
-		people = ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.setting='yes'");
+		people = ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.enabled==true");
 		
 		currentSession().unPromote();
 		

@@ -1,4 +1,10 @@
-﻿
+﻿var Mirror = require('MirrorAPI').Mirror;
+var MirrorAPI; //global - no good, but necessary to hold reference
+model.GlassSettings.events.onLoad = function()
+{
+	//setting the global var in this context - will the produce a bug?
+	MirrorAPI = new Mirror(this.owner.GoogleAccess);
+}
 model.GlassSettings.events.onInit = function()
 {
 	var sessionRef = currentSession();
@@ -27,5 +33,33 @@ model.GlassSettings.events.onRestrictingQuery = function()
 	return result;
 };
 
+model.GlassSettings.entityMethods.listSubscriptions = function(){
+	return MirrorAPI.listSubscriptions();
+};
+model.GlassSettings.entityMethods.listContacts = function(){
+	return MirrorAPI.listContacts();
+};
+model.GlassSettings.entityMethods.isSubscribed = function(){
+	var subReturn = this.listSubscriptions();
+	return (subReturn && subReturn.items && subReturn.items.length > 0);
+};
+model.GlassSettings.entityMethods.subscribeToMirrorApi = function(){
+	var mirrorResponse=MirrorAPI.addSubscription();
+	log = ds.GlassLog.createEntity(); 
+	log.request = "add subscription";
+	log.response = mirrorResponse;
+	log.orig = "test script";
+	log.save();
+	if(mirrorResponse && mirrorResponse.verifyToken) {
+		delete mirrorResponse.verifyToken;
+	}
+	return mirrorResponse;
+};
+model.GlassSettings.entityMethods.deleteSubscriptionToMirrorApi = function(subscribeID){
+	return MirrorAPI.deleteSubscription(subscribeID);
+}
 
-
+model.GlassSettings.entityMethods.listSubscriptions.scope ="publicOnServer";
+model.GlassSettings.entityMethods.listContacts.scope ="public";
+model.GlassSettings.entityMethods.isSubscribed.scope ="public";
+model.GlassSettings.entityMethods.subscribeToMirrorApi.scope = "public"
