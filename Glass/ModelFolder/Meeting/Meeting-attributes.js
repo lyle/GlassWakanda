@@ -1,0 +1,1 @@
+﻿model.Meeting = new DataClass("Meetings" ,"public");model.Meeting.owner = new Attribute("relatedEntity", "Person", "Person");model.Meeting.photoCount = new Attribute("calculated", "string");model.Meeting.photoCount.onGet = function() {	return this.photos.count();}

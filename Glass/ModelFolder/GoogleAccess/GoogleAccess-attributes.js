@@ -3,6 +3,9 @@ model.GoogleAccess.ID = new Attribute("storage", "string", "key");
 model.GoogleAccess.person = new Attribute("relatedEntities", "People", "GoogleAccess", {
 	"reversePath": true
 });
+model.GoogleAccess.glassSubscriptionNotifications = new Attribute("relatedEntities", "GlassSubscriptionNotification", "GoogleAccess", {
+	"reversePath": true
+});
 model.GoogleAccess.access_token = new Attribute("storage", "string",{
 	scope:"publicOnServer"
 });

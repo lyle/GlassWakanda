@@ -13,3 +13,8 @@ include("ModelFolder/GlassSettings/GlassSettings-methods.js");
 
 include("ModelFolder/GlassNotification/GlassNotification-attributes.js");
 include("ModelFolder/GlassNotification/GlassNotification-methods.js");
+
+
+include("ModelFolder/Photo/Photo-attributes.js");
+include("ModelFolder/Meeting/Meeting-attributes.js");
+include("ModelFolder/PhotoComment/PhotoComment-attributes.js");
