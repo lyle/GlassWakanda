@@ -1,4 +1,5 @@
-﻿
+﻿getFileExt = require('fileExtFromContentType');
+
 function Mirror(GoogleAccess, options){
   this.options = options || {};
   this.card = {};
@@ -104,12 +105,42 @@ Mirror.prototype.postHTMLMessage = function(htmlMessage, options){
 
 }
 
+Mirror.prototype.getAttachment = function(attachementId, contentType, contentUrl, attemptReAuth){
+	var tempFile, tempStream, imageObj;
+	var xhr = new XMLHttpRequest();
+	var auth = 'Bearer ' + this.GoogleAccess.access_token;
+	xhr.open('GET', contentUrl);
+  	xhr.setRequestHeader('Authorization', auth);
+  	xhr.setRequestHeader('Content-Type',contentType);
+  	xhr.responseType = 'blob';
+  	xhr.send();
+
+	if (xhr.readyState == 4 && xhr.status == 200 && xhr.response.size >0){
+		tempFile = File(ds.getTempFolder().path + directory.computeHA1(attachementId) + "." +getFileExt(contentType));
+		tempStream = BinaryStream(tempFile, "write", 50);
+		tempStream.putBlob(xhr.response);
+		tempStream.close();
+		imageObj = loadImage(tempFile);
+		tempFile.remove();
+		
+	}else if (xhr.status == 401 && attemptReAuth && this.GoogleAccess.getRefreshedAccessToken()){
+		imageObj = this.getAttachment(attachementId, contentType, contentUrl, false);
+	}
+	return imageObj;
+}
+
+Mirror.prototype.getItem = function(itemId){
+	return this.submitWithRefreshAuth('GET', this.url + "/" + itemId, null, true);
+}
+
+Mirror.prototype.updateItem = function(itemId, timelineObj){
+	return this.submitWithRefreshAuth('PUT', this.url + "/" + itemId, JSON.stringify(timelineObj), true);
+}
 Mirror.prototype.deleteItem = function(itemId){
 	return this.submitWithRefreshAuth('DELETE', this.url + "/" + itemId, null, true);
 }
 
 Mirror.prototype.listItems = function(options){
-	var response, xhr, auth;
 	var options = options || {};
 	options.maxResults = options.maxResults || 10;
 	this.url += "?maxResults=" + options.maxResults;
