@@ -1,0 +1,116 @@
+﻿/*
+http://colorschemedesigner.com/#1T21T6BK-mSf5
+Primary Color:
+FFFFCA  D1D1AE  BFBF62  FFFFD1  FFFFD6
+Complementary Color:
+C6ABD5  A593AF  84529F  D1B8DF  D2BCDF
+
+*/
+
+body {
+  font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  background-color: #D1D1AE;
+}
+a,a:visited{color:#555DA2;}
+
+.content, .footer, .header {
+  width: 600px;
+  margin:auto;
+}
+.header {
+  text-align: center;
+}
+.header h1 {
+  margin-bottom: 0;
+}
+.content {
+  background-color: #FFFFCA;
+  position: relative;
+  display: block;
+  padding:0 1em;
+  border-radius: 4%;
+  min-height: 300px
+}
+.content section{
+  width:45%;
+  float:left;
+  margin-right:2%;
+  height:100%;
+}
+section.welcome {
+  width:60%;
+}
+section.explorers {
+  width:30%;
+  float:right;
+  text-align: center;
+}
+section.explorers div{
+  background-color: #fff;
+  border-radius: 4%;
+}
+#GoogleLogin{
+  width: 200px;
+  margin: auto;
+  margin-top:30px;
+  display: block;
+  font-size: 2em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #BFBF62;
+  border: none;
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+}
+#GoogleLogin:hover{
+  width: 220px;
+  font-size: 2.1em;
+  -webkit-box-shadow: 0 0 7px black;
+  -moz-box-shadow: 0 0 7px black;
+  box-shadow: 0 0 7px black;
+}
+#GoogleLogin:active{
+  width: 200px;
+  font-size: 2em;
+  -webkit-box-shadow: 0 0 2px black;
+  -moz-box-shadow: 0 0 2px black;
+  box-shadow: 0 0 2px black;
+}
+
+.header .tagline {
+  font-size: 110%;
+  margin-top: 0;
+
+}
+.header h1 span {
+  
+  font-size: 2em;
+}
+.header .wakanda {
+  
+}
+.header .glass {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: normal;
+}
+
+.footer {
+  margin-top:2em;
+  border-top:1px solid black;
+  clear: both;
+}
+.footer .altlogin, .footer .glasslogin{
+  display:inline-block;
+  margin:0px;
+  width:45%;
+  float:left;
+}
+.footer .glasslogin {
+  text-align:right;
+}
+.clearfix {
+  clear: both;
+}

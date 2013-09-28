@@ -1,68 +1,72 @@
-﻿<!DOCTYPE html><html>
+﻿<!DOCTYPE html>
+<html>
 <head>
-<title>Glass wakandaDB</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="generator" content="Wakanda GUIDesigner"/>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-	<meta name="wakanda-version" content="5 build 5.137042"/>
-	<meta name="wakanda-build" content="5.137042"/>
-    <meta name="WAF.config.modules" content="dataprovider"/>
-	<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
-	<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
-	<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
-	<meta name="WAF.catalog" content="Person, GoogleAccess"/>
+  <title>Glass wakandaDB</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="generator" content="Wakanda GUIDesigner"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="wakanda-version" content="5 build 5.137042"/>
+  <meta name="wakanda-build" content="5.137042"/>
+  <meta name="WAF.config.modules" content="dataprovider"/>
+  <!--meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/-->
+  <!--meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/-->
+  <!--meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/-->
+  <meta name="WAF.packageJson"/>
+  <meta name="WAF.catalog" content="Person, GoogleAccess"/>
   <link rel="stylesheet" href="/lib/fork-ribbon/gh-fork-ribbon.css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300">
   <!--[if IE]>
-      <link rel="stylesheet" href="/lib/fork-ribbon/gh-fork-ribbon.ie.css" />
+  <link rel="stylesheet" href="/lib/fork-ribbon/gh-fork-ribbon.ie.css" />
   <![endif]-->
-	<script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <!--script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script-->
 </head>
 <body>
-<div class="header">
-  <p class="demo">A Demo App Built with <a href="http://wakandadb.org/"><img src="/lib/images/wakandaDB_134x30.png" alt="wakandaDB"></a></p>
-  <h1><span class="glass">Glass</span> <span class="wakanda">Wakanda</span></h1>
-  <p class="tagline">Reconnect with strangers you met through Google Glass</p>
-</div>
-<div class="content">
-    <div id="userProfile">
-      <img src="" class="uPic"/>
-      <h3 class="uName"></h3>
-      <button class="logout">Log Out</button>
-    </div>
-    <div id="introduction" class="introduction">
+  <div class="header">
+    <p class="demo">A Demo App Built with <a href="http://wakandadb.org/"><img src="/lib/images/wakandaDB_134x30.png" alt="wakandaDB"></a></p>
+    <h1><span class="glass">Glass</span> <span class="wakanda">Wakanda</span></h1>
+    <p class="tagline">Reconnect with strangers you met through Google Glass</p>
+  </div>
+  <div class="content">
+
+    <div class="introduction">
       <section class='welcome'>
-        <h2>I met someone with Glass...</h2>
-        <p>Photos were taken and fun was had by all.... log in to find pictures taken druing your introduction to Glass.</p>
-        <button id="GoogleLogin" value="button">Login Using Google</button>
-        <blockquote>
-        <p>I created "<span class="glass">Glass</span> <span class="wakanda">Wakanda</span>" to share photos with the hundreds of strangers I have met through Google Glass.</p>
-        <footer> - <cite>Lyle Troxell</cite></footer>
-        </blockquote>
-        
+        <div  id="introduction">
+          <h2>I met someone with Glass...</h2>
+          <p>Photos were taken and fun was had by all.... log in to find pictures taken druing your introduction to Glass.</p>
+          <button id="GoogleLogin" value="button">Login Using Google</button>
+          <blockquote>
+            <p>I created "<span class="glass">Glass</span> <span class="wakanda">Wakanda</span>" to share photos with the hundreds of strangers I have met through Google Glass.</p>
+            <footer> - <cite>Lyle Troxell</cite></footer>
+          </blockquote>
+        </div>
+        <div id="userProfile">
+          <img src="" class="uPic"/>
+          <h3 class="uName"></h3>
+          <button class="logout">Log Out</button>
+        </div>
+        <div id="welcome">
+          <h1>Welcome, thanks for Loging in</h1>
+          <p>To the right is the list of Glass Explorers who have shared images with <span class="glass">Glass</span> <span class="wakanda">Wakanda</span>.</p>
+          <p>Please feel free to peresue those photos.</p>
+        </div>
       </section>
       <section class="explorers">
-        <h3>Glass Explorers wtih Photos</h3>
-        <div>
+        <h3>Glass Explorers</h3>
+        <div id="glassUserList">
           Curently this system is not yet launched. So please bear with us.
-          
+
         </div>
       </section>
     </div>
-
-    <div id="welcome">
-      <h1>Welcome, thanks for Loging in</h1>
-      <p>This is to demonstrate <a href="http://wakandadb.org/">wakandaDB</a> a JavaScript based Database and Webserver.</p>
-      
-    </div>
-  <br class='clearfix'>
-</div>
-<div class="footer"><div class="altlogin">..</div> <div class="glasslogin"><a href="/glass">Glass Users</a></div>
+    <br class='clearfix'>
+  </div>
+  <div class="footer"><div class="altlogin">..</div> <div class="glasslogin"><a href="/glass">Glass Users</a></div>
   <br class='clearfix'></div>
   <div class="github-fork-ribbon-wrapper right">
-      <div class="github-fork-ribbon">
-          <a href="http://github.com/lyle/GlassWakanda">Fork me on GitHub</a>
-      </div>
+    <div class="github-fork-ribbon">
+      <a href="http://github.com/lyle/GlassWakanda">Fork me on GitHub</a>
+    </div>
   </div>
   <script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
-	</body>
+</body>
 </html>

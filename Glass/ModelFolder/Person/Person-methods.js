@@ -59,13 +59,20 @@ model.Person.methods.updateEmailHash = function(){
 	currentSession().unPromote();
 	return returnInfo;
 }
+model.Person.methods.getGlassUsers = function(){
+	var res ;
+	currentSession().promoteWith('User');
+	res = ds.Person.query('userName is not null and meetings != null');
+	currentSession().unPromote();
+	return res;
+}
 
 model.Person.methods.getCurrentPerson.scope ="public";
 model.Person.methods.signedUpOnDate.scope ="public";
 model.Person.methods.updateEmailHash.scope ="public";
 
 model.Person.methods.getAllPeeopls.scope ="public";
-
+model.Person.methods.getGlassUsers.scope ="public"
 
 
 

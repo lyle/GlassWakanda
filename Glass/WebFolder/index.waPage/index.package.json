@@ -1,1 +1,40 @@
-﻿{"name":"Glass/index.waPage/index.html","version":"1.0.0","loadDependencies":[{"id":"default","type":"theme"},{"id":"index.waPage/styles/index.css","path":"WEBFOLDER","type":"style"},{"id":"application.css","path":"WEBFOLDER","type":"style"},{"id":"index.waPage/scripts/index.js","path":"WEBFOLDER","type":"script"},{"id":"index.waPage/Person, GoogleAccess","path":"WEBFOLDER","type":"script"},{"id":"waLib/WAF/lib/jquery/jquery.min.js","path":"WEBFOLDER","type":"script"}]}
+﻿{
+  "name": "Glass/index.waPage/index.html",
+  "version": "1.0.0",
+  "loadDependencies": [
+    {
+      "id": "Desktop_Core",
+      "version": "1.0.0",
+      "type": "core"
+    },
+    {
+      "id": "default",
+      "type": "theme"
+    },
+    {
+      "id": "index.waPage/styles/index.css",
+      "path": "WEBFOLDER",
+      "type": "style"
+    },
+    {
+      "id": "application.css",
+      "path": "WEBFOLDER",
+      "type": "style"
+    },
+    {
+      "id": "index.waPage/scripts/index.js",
+      "path": "WEBFOLDER",
+      "type": "script"
+    },
+    {
+      "id": "index.waPage/Person, GoogleAccess",
+      "path": "WEBFOLDER",
+      "type": "script"
+    },
+    {
+      "id": "lib/mustache.js",
+      "path": "WEBFOLDER",
+      "type": "script"
+    }
+  ]
+}

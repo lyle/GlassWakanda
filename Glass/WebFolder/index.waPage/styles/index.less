@@ -48,7 +48,7 @@ body {
 a,a:visited{color:@compDark;}
 
 .content, .footer, .header {
-  width: 600px;
+  width: 800px;
   margin:auto;
 
 }
@@ -79,13 +79,35 @@ section.explorers {
   width:30%;
   float:right;
   text-align: center;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  max-height: 600px;
+  div.glassUser{
+    position: relative;
+    background-color: @compSubtle;
+    border-radius: 4%;
+    width:30%;
+    display: inline-block;
+    margin-right:2%;
+    margin-bottom: 2%;
+    img{
+      width:100%;
+    }
+    p{display:none;
+      position:absolute;
+      top:20px;
+      background-color: @compSubtle;
+    }
+  }
+  div.glassUser:hover p{
+    display:block;
+  }
 }
-section.explorers div{
-  background-color: @compSubtle;
-  border-radius: 4%;
-  background-color:red;
-  font-size: 200%;
+section.explorers::-webkit-scrollbar { 
+    display: none; 
 }
+
+
 #GoogleLogin{
   width: 200px;
   margin: auto;
@@ -195,4 +217,38 @@ blockquote {
 }
 .clearfix {
   clear: both;
+}
+#userProfile {
+  width: 150px;
+  margin:2px;
+  position:relative;
+}
+#userProfile h3 {
+  text-align: center;
+  margin:0px;
+  margin-bottom:3px;
+}
+#userProfile img {
+  width:100%;
+  margin:0px;
+}
+#userProfile button.logout {
+  display:none;
+  position:absolute;
+  width:150px;
+  margin:auto;
+  top:20px;
+  height:100px;
+  background-color: rgb(200,200,200);
+  text-align:center;
+  font-size: 30px;
+  line-height:100px;
+  border: none;
+}
+#userProfile:hover button.logout {
+  display:block;
+}
+#userProfile {
+  margin:1em;
+  padding:.3em;
 }
