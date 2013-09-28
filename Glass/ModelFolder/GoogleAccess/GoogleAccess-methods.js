@@ -1,20 +1,5 @@
-var OAuth = require('GoogleOAuth2').OAuth2;
-var glassApiData = require('ApiAppData').glassUser;
-var userApiData = require('ApiAppData').user;
+//Note: glassApiData, OAuth2, and OAuth2Glass are set globally in required.js
 
-var OAuth2 = new OAuth(userApiData.client_id,
-	userApiData.client_secret,
-	userApiData.redirect_uri,
-	{scope:userApiData.scope,
-		approval_prompt:userApiData.approval_prompt
-	});
-var OAuth2Glass = new OAuth(glassApiData.client_id,
-	glassApiData.client_secret,
-	glassApiData.redirect_uri,
-	{scope:glassApiData.scope,
-		approval_prompt:glassApiData.approval_prompt,
-		access_type:"offline"
-	});
 model.GoogleAccess.methods.getVerifyTokenSecret = function(){
 	return glassApiData.verifyToken;
 };
