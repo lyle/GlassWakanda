@@ -1,4 +1,4 @@
-﻿var googleOAuth2 = require('GoogleOAuth2').OAuth2;
+﻿var googleOAuth2 = require('GoogleOAuth2/GoogleOAuth2').OAuth2;
 var ApiData = require('ApiAppData').user;
 var glassApiData = require('ApiAppData').glassUser;
 var gInfo = require('GoogleUserInfo');
