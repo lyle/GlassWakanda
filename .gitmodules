@@ -1,0 +1,3 @@
+[submodule "Glass/Modules/GoogleOAuth2"]
+	path = Glass/Modules/GoogleOAuth2
+	url = https://github.com/lyle/GoogleOAuth2.git
