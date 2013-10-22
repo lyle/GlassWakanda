@@ -35,7 +35,7 @@ getGlassUsers = function(){
 renderGlassExplorers = function(users){
   var glassUserListElm = $('#glassUserList');
   glassUserListElm.html('');
-  var userTemplate = Mustache.compile("<div class='glassUser'><a href='/Meetings/{{{userName}}}'><img src='{{{picture}}}'><p>{{fullName}}</p></a></div>");
+  var userTemplate = Mustache.compile("<div class='glassUser'><a href='/~{{{userName}}}'><img src='{{{picture}}}'><p>{{fullName}}</p></a></div>");
   users.forEach(function(entity){
     if(entity.picture){
       glassUserListElm.append(userTemplate(entity));

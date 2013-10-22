@@ -7,6 +7,10 @@ addHttpRequestHandler("^/glassListContactItems", "Scripts/GoogleMirror.js",  "li
 
 
 
+//this matches ~userName
+addHttpRequestHandler("^/~[a-zA-Z]+[\/]*[?]*$", "Scripts/User.js", "displayUser");
+//this matches ~userName/asdf/asd/asd/asd/sd/
+addHttpRequestHandler("^/~[a-zA-Z]+[\/]+[\/a-zA-Z]*[?]*$", "Scripts/User.js", "notImplemented");
 addHttpRequestHandler("^/startWorker", "Scripts/workerControl.js",  "startWorker");
 addHttpRequestHandler("^/stopWorker", "Scripts/workerControl.js",  "stopWorker");
 addHttpRequestHandler("^/GoogleMirrorList", "Scripts/GoogleMirror.js",  "list");
