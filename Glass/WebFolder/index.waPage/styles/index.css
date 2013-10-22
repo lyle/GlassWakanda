@@ -1,2 +1,222 @@
-body{font:100% "Lucida Grande","Trebuchet MS",Verdana,sans-serif;background-color:#95aaaf;color:#19282c;margin:0}a,a:visited{color:#19282c}.content,.footer,.header{width:800px;margin:auto}.header{text-align:center}.header h1{margin:0}.content{background-color:#f8eee5;position:relative;display:block;padding:0 1em;border-radius:4%;min-height:300px}.content section{width:45%;float:left;margin-right:2%;height:100%}section.welcome{width:60%}section.explorers{width:30%;float:right;text-align:center;overflow-x:hidden;overflow-y:scroll;max-height:600px}section.explorers div.glassUser{position:relative;background-color:#95aaaf;border-radius:4%;width:30%;display:inline-block;margin-right:2%;margin-bottom:2%}section.explorers div.glassUser img{width:100%}section.explorers div.glassUser p{display:none;position:absolute;top:20px;background-color:#95aaaf}section.explorers div.glassUser:hover p{display:block}section.explorers::-webkit-scrollbar{display:none}#GoogleLogin{width:200px;margin:auto;margin-top:30px;display:block;font-size:2em;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;text-shadow:0 0 2px #fab70d;background:-webkit-gradient(linear,left top,left bottom,color-stop(0%, #f5e751),color-stop(100%, #fab70d));background:-moz-linear-gradient(center top, #f5e751 0, #fab70d 100%);border:0;-webkit-box-shadow:2px 2px 0 black;-moz-box-shadow:2px 2px 0 black;box-shadow:2px 2px 0 black}#GoogleLogin:hover{-webkit-box-shadow:3px 3px 2px black;-moz-box-shadow:3px 3px 2px black;box-shadow:3px 3px 2px black}#GoogleLogin:active{-webkit-box-shadow:2px 2px 0 black inset;-moz-box-shadow:2px 2px 0 black inset;box-shadow:2px 2px 0 black inset}.header .demo,.header .tagline,.footer{margin:0;padding:.2em 0;-webkit-border-radius:0 0 20px 20px;-moz-border-radius:0 0 20px 20px;border-radius:0 0 20px 20px;background-color:#366d7a;color:#98abaf;font-weight:lighter}.header .demo{padding:10px 0}.header .demo img{vertical-align:middle;margin-top:-4px;padding-left:.5em}.header .tagline{font-size:110%;-webkit-border-radius:20px 20px 0 0;-moz-border-radius:20px 20px 0 0;border-radius:20px 20px 0 0}.header h1 span{font-size:2em}span.wakanda{font-weight:700}span.glass{font-family:'Roboto';font-weight:300;font-style:normal}blockquote footer{text-align:right}blockquote p{color:#19282c}blockquote p:before,blockquote p:after{display:block;height:.2em;content:"“";margin-left:-.5em;font:italic 400%/1 Cochin,Georgia,"Times New Roman",serif;color:#71a2ad}blockquote p:after{content:"”";float:right;margin-right:-.2em}.footer{margin:auto;clear:both}.footer .altlogin,.footer .glasslogin{display:inline-block;margin:0;width:45%;float:left}.footer .glasslogin{float:right;text-align:right;padding-right:2em}.clearfix{clear:both}#userProfile{width:150px;margin:2px;position:relative}#userProfile h3{text-align:center;margin:0;margin-bottom:3px}#userProfile img{width:100%;margin:0}#userProfile button.logout{display:none;position:absolute;width:150px;margin:auto;top:20px;height:100px;background-color:#c8c8c8;text-align:center;font-size:30px;line-height:100px;border:0}#userProfile:hover button.logout{display:block}#userProfile{margin:1em;padding:.3em}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+/*
+http://colorschemedesigner.com/#1022am---l2s7
+Primary Color:
+FFC648  D5AD55  C49325  FFD370  FFDD90
+Complementary Color:
+5D83FF  647ED5  3053C4  819EFF  9DB4FF
+*/
+/*
+http://colorschemedesigner.com/#0z22a5tuutSf10ABZp1B3Vh3yp-5oG5QIpIBAvqMXKj
+Primary Color:
+F2DDC8  D1BEAA  A47648  F8EEE5  F6E5D5
+Complementary Color:
+71A2AD  19282C  366D7A  95AAAF  98ABAF
+*/
+body {
+  font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  background-color: #95aaaf;
+  color: #19282c;
+  margin: 0;
+}
+a,
+a:visited {
+  color: #19282c;
+}
+.content,
+.footer,
+.header {
+  width: 800px;
+  margin: auto;
+}
+.header {
+  text-align: center;
+}
+.header h1 {
+  margin: 0;
+}
+.content {
+  background-color: #f8eee5;
+  position: relative;
+  display: block;
+  padding: 0 1em;
+  border-radius: 4%;
+  min-height: 300px;
+}
+.content section {
+  width: 45%;
+  float: left;
+  margin-right: 2%;
+  height: 100%;
+}
+section.welcome {
+  width: 60%;
+}
+section.explorers {
+  width: 30%;
+  float: right;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+section.explorers div.glassUser {
+  position: relative;
+  background-color: #95aaaf;
+  border-radius: 4%;
+  width: 30%;
+  display: inline-block;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+section.explorers div.glassUser img {
+  width: 100%;
+}
+section.explorers div.glassUser p {
+  display: none;
+  position: absolute;
+  top: 20px;
+  background-color: #95aaaf;
+}
+section.explorers div.glassUser:hover p {
+  display: block;
+}
+section.explorers::-webkit-scrollbar {
+  display: none;
+}
+#GoogleLogin {
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+  font-size: 2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: 0px 0px 2px #fab70d;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5e751), color-stop(100%, #fab70d));
+  background: -moz-linear-gradient(center top, #f5e751 0%, #fab70d 100%);
+  border: none;
+  -webkit-box-shadow: 2px 2px 0 black;
+  -moz-box-shadow: 2px 2px 0 black;
+  box-shadow: 2px 2px 0 black;
+}
+#GoogleLogin:hover {
+  -webkit-box-shadow: 3px 3px 2px  black;
+  -moz-box-shadow: 3px 3px 2px  black;
+  box-shadow: 3px 3px 2px  black;
+}
+#GoogleLogin:active {
+  -webkit-box-shadow: 2px 2px 0 black inset;
+  -moz-box-shadow: 2px 2px 0 black inset;
+  box-shadow: 2px 2px 0 black inset;
+}
+.header .demo,
+.header .tagline,
+.footer {
+  margin: 0;
+  padding: .2em 0;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+  background-color: #366d7a;
+  color: #98abaf;
+  font-weight: lighter;
+}
+.header .demo {
+  padding: 10px 0px;
+}
+.header .demo img {
+  vertical-align: middle;
+  margin-top: -4px;
+  padding-left: 0.5em;
+}
+.header .tagline {
+  font-size: 110%;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 0 0;
+}
+.header h1 span {
+  font-size: 2em;
+}
+span.wakanda {
+  font-weight: bold;
+}
+span.glass {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: normal;
+}
+blockquote footer {
+  text-align: right;
+}
+blockquote p {
+  color: #19282c;
+}
+blockquote p:before,
+blockquote p:after {
+  display: block;
+  height: .2em;
+  content: "“";
+  margin-left: -0.5em;
+  font: italic 400%/1 Cochin, Georgia, "Times New Roman", serif;
+  color: #71a2ad;
+}
+blockquote p:after {
+  content: "”";
+  float: right;
+  margin-right: -0.2em;
+}
+.footer {
+  margin: auto;
+  clear: both;
+}
+.footer .altlogin,
+.footer .glasslogin {
+  display: inline-block;
+  margin: 0px;
+  width: 45%;
+  float: left;
+}
+.footer .glasslogin {
+  float: right;
+  text-align: right;
+  padding-right: 2em;
+}
+.clearfix {
+  clear: both;
+}
+#userProfile {
+  width: 150px;
+  margin: 2px;
+  position: relative;
+}
+#userProfile h3 {
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 3px;
+}
+#userProfile img {
+  width: 100%;
+  margin: 0px;
+}
+#userProfile button.logout {
+  display: none;
+  position: absolute;
+  width: 150px;
+  margin: auto;
+  top: 20px;
+  height: 100px;
+  background-color: #c8c8c8;
+  text-align: center;
+  font-size: 30px;
+  line-height: 100px;
+  border: none;
+}
+#userProfile:hover button.logout {
+  display: block;
+}
+#userProfile {
+  margin: 1em;
+  padding: .3em;
+}
