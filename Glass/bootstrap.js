@@ -1,4 +1,3 @@
-directory.setLoginListener("googleListener", "Admin");
 
 addHttpRequestHandler("^/fromMirrorApi", "Scripts/GoogleMirror.js", "subscriptionCallBack");
 addHttpRequestHandler("^/login", "Scripts/ReceiveOAuth2.js",  "login");
