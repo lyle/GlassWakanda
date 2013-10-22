@@ -2,12 +2,28 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var userNameEntry = {};	// @textField
 	var glassSettingsEvent = {};	// @dataSource
 	var documentEvent = {};	// @document
 	var settingEnabled = {};	// @checkbox
 // @endregion// @endlock
 var pageJustLoaded = true;
 // eventHandlers// @lock
+
+	userNameEntry.change = function userNameEntry_change (event)// @startlock
+	{// @endlock
+		if(source.person && source.person.userName){
+			$("#userMessage").html('Updating Vanity URL').effect('highlight');
+			source.person.save({
+				onSuccess:function(event){
+					$("#userMessage").html('Vanity URL Updated').effect('highlight').delay(2000).fadeOut();
+				},
+				onError:function(error){
+					$("#userMessage").html(error['error'][0].message).effect('highlight', {color: 'red'});
+				}
+			});
+		}
+	};// @lock
 var getContactsInfo = function(){
 	source.glassSettings.listContacts({
 		onSuccess:function(event){
@@ -79,6 +95,7 @@ var updateSubscriptionView = function(show){
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("userNameEntry", "change", userNameEntry.change, "WAF");
 	WAF.addListener("glassSettings", "onCurrentElementChange", glassSettingsEvent.onCurrentElementChange, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 	WAF.addListener("settingEnabled", "click", settingEnabled.click, "WAF");
