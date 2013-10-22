@@ -9,7 +9,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-		var userNameMatcher = new RegExp("/~([a-z]+)");
+		var userNameMatcher = new RegExp("/~([a-zA-Z]+)");
 		var url = document.URL;
 		var user = url.match(userNameMatcher)[1];
 		ds.Person.query("userName = :1 order by created_at desc", user,{
