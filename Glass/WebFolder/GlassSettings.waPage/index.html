@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="generator" content="Wakanda GUIDesigner"/>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-        <meta name="WAF.catalog" content="GlassSettings,Person"/>
+        <meta name="WAF.catalog" content="GlassSettings,Person,GoogleAccess"/>
         <meta name="WAF.packageJson"/>
     	<meta name="wakanda-version" content="6 build 6.145594"/>
 		<meta name="wakanda-build" content="6.145594"/>
@@ -13,7 +13,7 @@
 		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 
 		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="GlassSettings" data-lib="WAF" data-id="glassSettings" data-dataType="string" data-autoLoad="true" content="glassSettings"/>
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Person" data-lib="WAF" data-id="person" data-dataType="string" data-autoLoad="true" content="person"/><meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
+		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Person" data-lib="WAF" data-id="person" data-dataType="string" data-autoLoad="false" content="person"/><meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 
   		<link rel="stylesheet" href="/lib/fork-ribbon/gh-fork-ribbon.css"/>
   		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300"/>
@@ -23,11 +23,11 @@
   		<!--script src="/waLib/WAF/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script-->
 
 	</head>
-    <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" class="waf-theme default settings" style="bottom:NaNpx;right:NaNpx;visibility:hidden;">
+    <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" class="waf-theme default settings" data-theme="default" style="bottom:NaNpx;right:NaNpx;visibility:hidden;">
 
   <div class="header">
     <p class="demo">A Demo App Built with <a href="http://wakandadb.org/"><img src="/lib/images/wakandaDB_134x30.png" alt="wakandaDB"/></a></p>
-    <h1><span class="glass">Glass</span> <span class="wakanda">Wakanda</span></h1>
+    <h1><a href="/"><span class="glass">Glass</span> <span class="wakanda">Wakanda</span></a></h1>
     <p class="tagline">Reconnect with strangers you met through Google Glass</p>
   </div>
   <div class="content">
@@ -47,20 +47,24 @@
 		<div id="richText4" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="settings for " data-constraint-top="true" data-constraint-left="true" data-binding="person.fullName" data-autoWidth="false" class="waf-widget waf-richText "><br class="clearfix"/></div>
 		<label id="label2" for="richText4" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-label waf-label-richText">settings for </label>
 		<label id="vanityURLlabel" for="userNameEntry" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-label waf-label-textField">https://glass.wakanda.org/~</label>
-		<input type="text" id="userNameEntry" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="https://glass.wakanda.org/Meetings/" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-left="true" data-binding="person.userName" class="waf-widget waf-textField "/>
+		<input type="text" id="userNameEntry" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="https://glass.wakanda.org/~" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-left="true" data-binding="person.userName" class="waf-widget waf-textField "/>
+<button id="toVanityURL" data-type="button" data-text="Go" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-action="simple" class="waf-widget waf-button "></button>
 </div>
+  
     <br class="clearfix"/>
     <br class="clearfix"/>
     <br class="clearfix"/>
     <br class="clearfix"/>
     <br class="clearfix"/>
+    <button id="GoogleLogin" value="button">Glass User, Please Login Using Google</butto>
+
     <br class="clearfix"/>
     <br class="clearfix"/>
     <br class="clearfix"/>
     <br class="clearfix"/>
     <br class="clearfix"/>
 </div>
-  <div class="footer"><div class="altlogin">..</div> <div class="glasslogin"><a href="/glass">Glass Users</a></div>
+  <div class="footer"><div class="altlogin">..</div> <div class="glasslogin"><a href="/GlassSettings">Glass Users</a></div>
   <br class="clearfix"/>
 </div>
   <div class="github-fork-ribbon-wrapper right">
