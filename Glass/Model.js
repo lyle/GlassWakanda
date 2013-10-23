@@ -2,8 +2,9 @@
 
 model = new DataStoreCatalog();
 
-include("ModelFolder/GoogleAccess/GoogleAccess-attributes.js");
-include("ModelFolder/GoogleAccess/GoogleAccess-methods.js");
+model.GoogleAccess = require("Model/GoogleAccess/GoogleAccess-attributes.js");
+model.GoogleAccess.methods = require("Model/GoogleAccess/GoogleAccess-methods.js");
+model.GoogleAccess.entityMethods = require("Model/GoogleAccess/GoogleAccess-entityMethods.js");
 
 model.Person = require("Model/Person/Person-attributes.js");
 model.Person.methods = require("Model/Person/Person-methods.js");
