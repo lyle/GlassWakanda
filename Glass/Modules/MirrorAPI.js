@@ -71,7 +71,7 @@ Mirror.prototype.submitWithRefreshAuth = function(method, url, body, attemptReAu
 	xhr.open(method, url);
   	xhr.setRequestHeader('Authorization', auth);
   	xhr.setRequestHeader('Content-Type','application/json');
-  	if (body) {
+  if (body) {
 		xhr.send(body);
 	}else{
 		xhr.send();
@@ -81,6 +81,7 @@ Mirror.prototype.submitWithRefreshAuth = function(method, url, body, attemptReAu
 	}else{
 		return {"no-response":true};
 	}
+  
 	if (response && response.error && response.error.code == 401){
 		//401 is "Invalid Credentials
 		if (attemptReAuth && this.GoogleAccess.getRefreshedAccessToken()){
