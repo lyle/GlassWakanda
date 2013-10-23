@@ -1,10 +1,9 @@
 ﻿var Mirror = require('MirrorAPI').Mirror;
-var MirrorAPI; //global - no good, but necessary to hold reference
+var MirrorAPI; 
 var events = {};
 var entityMethods = {};
 events.onLoad = function()
 {
-	//setting the global var in this context - will the produce a bug?
 	MirrorAPI = new Mirror(this.owner.GoogleAccess);
 }
 events.onInit = function()
