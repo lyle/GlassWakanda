@@ -87,7 +87,13 @@ function googleOAuth2Login(code, options){
   if(accessData.refresh_token){
     googleAccess.refresh_token = accessData.refresh_token;
   }
+
   googleAccess.save();
+
+  if (type=='glass'){
+    setUpGlassUser(googleAccess);
+  }
+
   
 
   createUserSession({
@@ -102,3 +108,17 @@ function googleOAuth2Login(code, options){
 
   return person;
 }
+
+function setUpGlassUser(googleAccount){
+
+  if(googleAccount.GlassSettings.length == 0){
+    glassSetting = new ds.GlassSettings({
+        name: 'NewUserNotifications',
+        googleAccount: googleAccount,
+        enabled: false
+    });
+    glassSetting.save();
+    glassSetting.refresh();
+  }
+}
+
