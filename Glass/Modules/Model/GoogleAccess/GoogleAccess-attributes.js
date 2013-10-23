@@ -7,6 +7,10 @@ GoogleAccess.person = new Attribute("relatedEntities", "People", "GoogleAccess",
 GoogleAccess.GlassSettings = new Attribute("relatedEntities", "GlassSettings", "googleAccount", {
 	"reversePath": true
 });
+GoogleAccess.GlassNotifications = new Attribute("relatedEntities", "GlassNotification", "googleAccount", {
+	"reversePath": true
+});
+
 //GoogleAccess.glassSubscriptionNotifications = new Attribute("relatedEntities", "GlassSubscriptionNotification", "GoogleAccess", {
 //	"reversePath": true
 //});

@@ -7,7 +7,7 @@ function sendNotifications(){
 	
   	var notifications = ds.GlassNotification.query('sentAt == null');
   	notifications.forEach(function(notification){
-  		var mir = new Mirror(notification.owner.GoogleAccess);
+  		var mir = new Mirror(notification.googleAccount);
   		var respons = mir.postHTMLMessage(notification.message, {"bundleId":"GlassWakandaBundle"});
   		if(respons && respons.error) {
   			//some sort of error

@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="generator" content="Wakanda GUIDesigner"/>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-        <meta name="WAF.catalog" content="Person,GlassSettings,GlassNotification"/>
-    	<meta name="wakanda-version" content="Dev build 0.140709"/>
-		<meta name="wakanda-build" content="0.140709"/>
+        <meta name="WAF.catalog" content="Person,GlassSettings,GlassNotification,GoogleAccess"/>
+    	<meta name="wakanda-version" content="6 build 6.145594"/>
+		<meta name="wakanda-build" content="6.145594"/>
 		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
 		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 
@@ -16,6 +16,8 @@
 		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="person.notifications" data-lib="WAF" data-id="notifications" data-dataType="string" data-autoLoad="true" content="notifications"/>
 
 		<meta name="WAF.packageJson"/>
+		<meta data-type="dataSource" data-lib="WAF" data-source="person.GoogleAccess" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="GoogleAccess1" content="GoogleAccess1"/>
+		<meta data-type="dataSource" data-lib="WAF" data-source="GoogleAccess1.GlassNotifications" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="GlassNotifications" content="GlassNotifications"/>
 
 		</head>
     <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="default" data-platform="desktop" data-lib="WAF" data-group="[]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
@@ -33,6 +35,7 @@
  	 		<label id="label6" for="checkbox2" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" class="waf-widget waf-label waf-label-checkbox">Label</label>
  	 	</div>
  	</div>
+		<div id="dataGrid3" data-type="dataGrid" data-lib="WAF" data-binding="GlassNotifications" class="waf-widget waf-dataGrid " data-label="" data-label-position="top" data-selection-mode="single" data-display-error="true" data-footer-text="item(s)" data-column="[{'sourceAttID':'message','colID':'message','width':'150','title':'message'},{'sourceAttID':'sentAt','colID':'sentAt','width':'100','title':'sentAt'}]" data-constraint-left="true" data-constraint-top="true"></div>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>
 </html>

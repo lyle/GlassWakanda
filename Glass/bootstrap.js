@@ -16,3 +16,8 @@ addHttpRequestHandler("^/stopWorker", "Scripts/workerControl.js",  "stopWorker")
 addHttpRequestHandler("^/GoogleMirrorList", "Scripts/GoogleMirror.js",  "list");
 addHttpRequestHandler("^/GoogleMirrorDeleteItem", "Scripts/GoogleMirror.js",  "deleteItem");
 //addHttpRequestHandler("^/GoogleMirrorPost", "Scripts/GoogleMirror.js",  "post");
+
+
+//Need to migrate DB with these:
+ds.GoogleAccess.setGlassSettingsToGoogleAccess();
+ds.GoogleAccess.setGlassNotificationsToGoogleAccess()

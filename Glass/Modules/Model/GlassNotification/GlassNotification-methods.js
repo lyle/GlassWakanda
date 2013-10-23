@@ -7,14 +7,14 @@ methods.notifyAllWithMessage = function(theMessage)
 	
 	if (message) {
 		currentSession().promoteWith('Administrator');
-		people = ds.Person.query("GlassSettings.name='NewUserNotifications' and GlassSettings.enabled==true");
+		googleAccounts = ds.GoogleAccess.query("GlassSettings.name='NewUserNotifications' and GlassSettings.enabled==true");
 		
 		currentSession().unPromote();
 		
-		people.forEach(function(person){
+		googleAccounts.forEach(function(account){
 			notification = new ds.GlassNotification(
 			{
-				owner: person.ID,
+				googleAccount: account.ID,
 				message: message
 			});
 			notification.save();
