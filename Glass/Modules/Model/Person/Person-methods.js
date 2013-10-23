@@ -1,4 +1,6 @@
-model.Person.methods.getCurrentPerson = function(){
+var methods;
+methods = exports;
+methods.getCurrentPerson = function(){
 	var user = currentSession().user;
 //	return user;
 	if(user.ID === "00000000000000000000000000000000" || ! user.fullName){
@@ -11,7 +13,7 @@ model.Person.methods.getCurrentPerson = function(){
 		return ds.Person({ID:user.ID});
 	}
 };
-model.Person.methods.signedUpOnDate = function(queryDate){
+methods.signedUpOnDate = function(queryDate){
   var queryDate = queryDate || new Date();
   	if (typeof queryDate == "string"){
   	  queryDate = new Date(queryDate);
@@ -23,20 +25,15 @@ model.Person.methods.signedUpOnDate = function(queryDate){
 	return res;
 }
 
-model.Person.methods.getAllPeeopls = function(){
+methods.getAllPeeopls = function(){
 	var res ;
 	currentSession().promoteWith('User');
 	res = ds.Person.all();
 	currentSession().unPromote();
 	return res;
 }
-model.Person.events.onLoad=function(attributeName){
-	//if (currentSession().user.ID != this.ID  ) {
-	if (currentSession().user.ID != this.ID && !currentSession().belongsTo("RealAdmin")){
-		this.email = "****";
-	}
-};
-model.Person.methods.updateEmailHash = function(){
+
+methods.updateEmailHash = function(){
 	var returnInfo = {};
 	returnInfo.totalSelected = 0;
 	returnInfo.totalUpdated = 0;
@@ -59,7 +56,7 @@ model.Person.methods.updateEmailHash = function(){
 	currentSession().unPromote();
 	return returnInfo;
 }
-model.Person.methods.getGlassUsers = function(){
+methods.getGlassUsers = function(){
 	var res ;
 	currentSession().promoteWith('User');
 	res = ds.Person.query('userName is not null and meetings != null');
@@ -67,12 +64,12 @@ model.Person.methods.getGlassUsers = function(){
 	return res;
 }
 
-model.Person.methods.getCurrentPerson.scope ="public";
-model.Person.methods.signedUpOnDate.scope ="public";
-model.Person.methods.updateEmailHash.scope ="public";
+methods.getCurrentPerson.scope ="public";
+methods.signedUpOnDate.scope ="public";
+methods.updateEmailHash.scope ="public";
 
-model.Person.methods.getAllPeeopls.scope ="public";
-model.Person.methods.getGlassUsers.scope ="public"
+methods.getAllPeeopls.scope ="public";
+methods.getGlassUsers.scope ="public"
 
-
+//module.exports = methods;
 
