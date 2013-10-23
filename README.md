@@ -28,3 +28,19 @@ Todo:
 * Copy <code>./Glass/Modules/GoogleOAuthSecret_example.js</code> to <code>./Glass/Modules/GoogleOAuthSecret.js</code>
   * And update those settings to match the stuff from your Google API Project
 * Start Wakanda 6 or later poiting to this solution.
+
+You can also use inet.d to run wakanda as a service
+
+    /etc/init.d/wakanda start
+    /etc/init.d/wakanda stop
+
+You can take a look at my [init.d for glass.wakanda.org](init.d-wakanda).
+
+### Notes for Managing Server - My Server Version ###
+
+I normally log in as root. But wakanda is running as user wakanda so
+
+    sudo su wakanda
+The soultion is held in
+
+    /opt/wakanda/GlassWakanda
