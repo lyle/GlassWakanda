@@ -2,6 +2,7 @@
 GlassSettings = new DataClass("GlassSettings" ,"public");
 GlassSettings.ID = new Attribute("storage", "long", "key auto");
 GlassSettings.owner = new Attribute("relatedEntity", "Person", "Person");
+GlassSettings.googleAccount = new Attribute("relatedEntity", "GoogleAccess", "GoogleAccess");
 GlassSettings.name = new Attribute("storage", "string", "btree");
 GlassSettings.setting = new Attribute("storage", "string");
 GlassSettings.enabled = new Attribute("storage", "bool");

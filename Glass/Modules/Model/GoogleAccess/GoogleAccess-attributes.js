@@ -4,6 +4,9 @@ GoogleAccess.ID = new Attribute("storage", "string", "key");
 GoogleAccess.person = new Attribute("relatedEntities", "People", "GoogleAccess", {
 	"reversePath": true
 });
+GoogleAccess.GlassSettings = new Attribute("relatedEntities", "GlassSettings", "googleAccount", {
+	"reversePath": true
+});
 //GoogleAccess.glassSubscriptionNotifications = new Attribute("relatedEntities", "GlassSubscriptionNotification", "GoogleAccess", {
 //	"reversePath": true
 //});
