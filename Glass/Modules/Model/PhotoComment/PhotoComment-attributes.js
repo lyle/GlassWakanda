@@ -1,0 +1,1 @@
+﻿var PhotoComment;PhotoComment = new DataClass("PhotoComments" ,"public");PhotoComment.photo = new Attribute("relatedEntity", "Photo", "Photo");PhotoComment.author = new Attribute("relatedEntity", "Person", "Person");module.exports = PhotoComment;

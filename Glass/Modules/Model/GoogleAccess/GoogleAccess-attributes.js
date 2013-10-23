@@ -1,11 +1,12 @@
-var GoogleAccess = new DataClass("GoogleAccessCollection" ,"public");
+var GoogleAccess;
+GoogleAccess = new DataClass("GoogleAccessCollection" ,"public");
 GoogleAccess.ID = new Attribute("storage", "string", "key");
 GoogleAccess.person = new Attribute("relatedEntities", "People", "GoogleAccess", {
 	"reversePath": true
 });
-GoogleAccess.glassSubscriptionNotifications = new Attribute("relatedEntities", "GlassSubscriptionNotification", "GoogleAccess", {
-	"reversePath": true
-});
+//GoogleAccess.glassSubscriptionNotifications = new Attribute("relatedEntities", "GlassSubscriptionNotification", "GoogleAccess", {
+//	"reversePath": true
+//});
 GoogleAccess.access_token = new Attribute("storage", "string",{
 	scope:"publicOnServer"
 });

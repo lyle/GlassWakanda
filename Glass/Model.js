@@ -9,13 +9,14 @@ model.GoogleAccess.entityMethods = require("Model/GoogleAccess/GoogleAccess-enti
 model.Person = require("Model/Person/Person-attributes.js");
 model.Person.methods = require("Model/Person/Person-methods.js");
 
-include("ModelFolder/GlassSettings/GlassSettings-attributes.js");
-include("ModelFolder/GlassSettings/GlassSettings-methods.js");
+model.GlassSettings = require("Model/GlassSettings/GlassSettings-attributes.js");
 
-include("ModelFolder/GlassNotification/GlassNotification-attributes.js");
-include("ModelFolder/GlassNotification/GlassNotification-methods.js");
+model.GlassNotification = require("Model/GlassNotification/GlassNotification-attributes.js");
+model.GlassNotification.methods = require("Model/GlassNotification/GlassNotification-methods.js");
 
+model.GlassLog = require("Model/GlassLog/GlassLog-attributes.js");
 
-include("ModelFolder/Photo/Photo-attributes.js");
-include("ModelFolder/Meeting/Meeting-attributes.js");
-include("ModelFolder/PhotoComment/PhotoComment-attributes.js");
+model.Photo = require("Model/Photo/Photo-attributes.js");
+model.Meeting = require("Model/Meeting/Meeting-attributes.js");
+model.PhotoComment = require("Model/PhotoComment/PhotoComment-attributes.js");
+

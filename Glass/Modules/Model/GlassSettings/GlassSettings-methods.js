@@ -1,11 +1,13 @@
 ﻿var Mirror = require('MirrorAPI').Mirror;
 var MirrorAPI; //global - no good, but necessary to hold reference
-model.GlassSettings.events.onLoad = function()
+var events = {};
+var entityMethods = {};
+events.onLoad = function()
 {
 	//setting the global var in this context - will the produce a bug?
 	MirrorAPI = new Mirror(this.owner.GoogleAccess);
 }
-model.GlassSettings.events.onInit = function()
+events.onInit = function()
 {
 	var sessionRef = currentSession();
 	var currentUser = sessionRef.user;
@@ -18,7 +20,7 @@ model.GlassSettings.events.onInit = function()
 	
 }
 
-model.GlassSettings.events.onRestrictingQuery = function()
+events.onRestrictingQuery = function()
 {
 	var sessionRef = currentSession();
 	var currentUser = sessionRef.user;
@@ -33,17 +35,17 @@ model.GlassSettings.events.onRestrictingQuery = function()
 	return result;
 };
 
-model.GlassSettings.entityMethods.listSubscriptions = function(){
+entityMethods.listSubscriptions = function(){
 	return MirrorAPI.listSubscriptions();
 };
-model.GlassSettings.entityMethods.listContacts = function(){
+entityMethods.listContacts = function(){
 	return MirrorAPI.listContacts();
 };
-model.GlassSettings.entityMethods.isSubscribed = function(){
+entityMethods.isSubscribed = function(){
 	var subReturn = this.listSubscriptions();
 	return (subReturn && subReturn.items && subReturn.items.length > 0);
 };
-model.GlassSettings.entityMethods.subscribeToMirrorApi = function(){
+entityMethods.subscribeToMirrorApi = function(){
 	var mirrorResponse=MirrorAPI.addSubscription();
 	log = ds.GlassLog.createEntity(); 
 	log.request = "add subscription";
@@ -55,11 +57,14 @@ model.GlassSettings.entityMethods.subscribeToMirrorApi = function(){
 	}
 	return mirrorResponse;
 };
-model.GlassSettings.entityMethods.deleteSubscriptionToMirrorApi = function(subscribeID){
+entityMethods.deleteSubscriptionToMirrorApi = function(subscribeID){
 	return MirrorAPI.deleteSubscription(subscribeID);
 }
 
-model.GlassSettings.entityMethods.listSubscriptions.scope ="publicOnServer";
-model.GlassSettings.entityMethods.listContacts.scope ="public";
-model.GlassSettings.entityMethods.isSubscribed.scope ="public";
-model.GlassSettings.entityMethods.subscribeToMirrorApi.scope = "public"
+entityMethods.listSubscriptions.scope ="publicOnServer";
+entityMethods.listContacts.scope ="public";
+entityMethods.isSubscribed.scope ="public";
+entityMethods.subscribeToMirrorApi.scope = "public"
+
+exports.events = events;
+exports.entityMethods = entityMethods;

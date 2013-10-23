@@ -1,4 +1,5 @@
-var Person = new DataClass("People" ,"public");
+var Person;
+Person = new DataClass("People" ,"public");
 Person.ID = new Attribute("storage", "uuid", "key auto");
 Person.firstName = new Attribute("storage", "string");
 Person.lastName = new Attribute("storage", "string");
@@ -8,6 +9,7 @@ Person.userName = new Attribute("storage", "string",{
 	unique: true
 });
 Person.GoogleAccess = new Attribute("relatedEntity", "GoogleAccess", "GoogleAccess");
+
 Person.notifications = new Attribute("relatedEntities", "GlassNotification", "owner", {
 	"reversePath": true
 });
@@ -18,8 +20,8 @@ Person.photoComments = new Attribute("relatedEntities", "PhotoComment", "author"
 Person.photos = new Attribute("relatedEntities", "Photo", "owner", {
 	"reversePath": true
 });
-
-Person.meetings = new Attribute("relatedEntities", "Meeting", "owner", {
+//
+Person.meetings = new Attribute("relatedEntities", "Meetings", "owner", {
 	"reversePath": true
 });
 

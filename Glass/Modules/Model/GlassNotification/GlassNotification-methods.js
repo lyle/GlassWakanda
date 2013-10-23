@@ -1,5 +1,6 @@
-﻿
-model.GlassNotification.methods.notifyAllWithMessage = function(theMessage)
+﻿var methods;
+methods = exports;
+methods.notifyAllWithMessage = function(theMessage)
 {
 	var message = theMessage;
 	var	people, notificaion;
