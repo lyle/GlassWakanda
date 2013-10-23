@@ -86,6 +86,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 	  ds.GoogleAccess.getGlassAuthenticationURL({
 	    'onSuccess': function (event) {
+	    	//onsole.log(event.result)
 	      document.location.href = event.result;
 	    },  
 	    'onError': function (event) {
