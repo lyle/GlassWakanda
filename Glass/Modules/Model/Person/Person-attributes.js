@@ -10,9 +10,6 @@ Person.userName = new Attribute("storage", "string",{
 });
 Person.GoogleAccess = new Attribute("relatedEntity", "GoogleAccess", "GoogleAccess");
 
-Person.notifications = new Attribute("relatedEntities", "GlassNotification", "owner", {
-	"reversePath": true
-});
 Person.photoComments = new Attribute("relatedEntities", "PhotoComment", "author", {
 	"reversePath": true
 });
@@ -25,9 +22,6 @@ Person.meetings = new Attribute("relatedEntities", "Meetings", "owner", {
 	"reversePath": true
 });
 
-Person.GlassSettings = new Attribute("relatedEntities", "GlassSettings", "owner", {
-	"reversePath": true
-});
 Person.fullName = new Attribute("calculated", "string");
 
 Person.fullName.onSet = function(value) { 
