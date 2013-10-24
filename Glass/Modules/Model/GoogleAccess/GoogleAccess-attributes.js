@@ -1,6 +1,11 @@
 var GoogleAccess;
 GoogleAccess = new DataClass("GoogleAccessCollection" ,"public");
 GoogleAccess.ID = new Attribute("storage", "string", "key");
+
+var primeDates = require("Model/dateAttributes/created_updated.js");
+GoogleAccess.created_at = primeDates.created_at;
+GoogleAccess.updated_at = primeDates.updated_at;
+
 GoogleAccess.person = new Attribute("relatedEntities", "People", "GoogleAccess", {
 	"reversePath": true
 });
@@ -20,28 +25,6 @@ GoogleAccess.token_type = new Attribute("storage", "string");
 GoogleAccess.refresh_token = new Attribute("storage", "string",{
 	scope:"publicOnServer"
 });
-
-GoogleAccess.created_at = new Attribute("storage", "date", null, {
-	"simpleDate": false
-});
-
-GoogleAccess.created_at.events.onInit = function(attributeName) {
-	this.created_at = new Date();
-};
-
-
-GoogleAccess.updated_at = new Attribute("storage", "date", null, {
-	"simpleDate": false
-});
-
-GoogleAccess.updated_at.events.onValidate = function(attributeName) {
-	this.updated_at = new Date();
-};
-
-
-GoogleAccess.updated_at.events.onSave = function(attributeName) {
-	this.updated_at = new Date();
-};
 
 GoogleAccess.glassLogs = new Attribute("relatedEntities", "GlassLogs", "GoogleAccess", {
 	"reversePath": true

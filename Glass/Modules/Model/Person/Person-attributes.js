@@ -39,14 +39,10 @@ Person.email.addEventListener("onSave", function(attributeName){
 	this.emailHash = directory.computeHA1(this.email);
 })
 
-Person.created_at = new Attribute("storage", "date", null);
-Person.created_at.events.onInit = function(attributeName) {
-	this.created_at = new Date();
-};
-Person.updated_at = new Attribute("storage", "date", null);
-Person.updated_at.events.onSave = function(attributeName) {
-	this.updated_at = new Date();
-};
+var primeDates = require("Model/dateAttributes/created_updated.js");
+Person.created_at = primeDates.created_at;
+Person.updated_at = primeDates.updated_at;
+
 Person.userName.events.onValidate = function(attributeName){
 	var bad_chars = /[^\w]/;
 	if(this.userName && bad_chars.test(this.userName)) {

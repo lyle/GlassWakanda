@@ -7,7 +7,7 @@ GlassIn.googleAccount = new Attribute("relatedEntity", "GoogleAccess", "GoogleAc
 
 
 GlassIn.itemId = new Attribute("storage", "string");
-GlassIn.processed_at = new Attribute("storage", "date");
+GlassIn.processed_at = new Attribute("storage", "date",{simpleDate:false});
 GlassIn.notificationBody = new Attribute("storage", "string");
 
 var primeDates = require("Model/dateAttributes/created_updated.js");
