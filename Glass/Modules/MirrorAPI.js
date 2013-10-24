@@ -106,6 +106,12 @@ Mirror.prototype.postHTMLMessage = function(htmlMessage, options){
 
 }
 
+Mirror.prototype.getAttachmentResource = function(itemId, attachmentId){
+  //GET https://www.googleapis.com/mirror/v1/timeline/{itemId}/attachments/{attachmentId}
+  var url = this.url + "/" + itemId + "/attachments/" + attachmentId;
+  return this.submitWithRefreshAuth('GET', url, null, true)
+}
+
 Mirror.prototype.getAttachment = function(attachementId, contentType, contentUrl, attemptReAuth){
 	var tempFile, tempStream, imageObj;
 	var xhr = new XMLHttpRequest();

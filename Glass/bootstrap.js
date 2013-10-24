@@ -13,6 +13,8 @@ addHttpRequestHandler("^/~[a-zA-Z]+[\/]*[?]*$", "Scripts/User.js", "displayUser"
 addHttpRequestHandler("^/~[a-zA-Z]+[\/]+[\/a-zA-Z]*[?]*$", "Scripts/User.js", "notImplemented");
 addHttpRequestHandler("^/startWorker", "Scripts/workerControl.js",  "startWorker");
 addHttpRequestHandler("^/stopWorker", "Scripts/workerControl.js",  "stopWorker");
+addHttpRequestHandler("^/startGlassInWorker", "Scripts/workerControl.js",  "startGlassInWorker");
+addHttpRequestHandler("^/stopGlassInWorker", "Scripts/workerControl.js",  "stopGlassInWorker");
 addHttpRequestHandler("^/GoogleMirrorList", "Scripts/GoogleMirror.js",  "list");
 addHttpRequestHandler("^/GoogleMirrorDeleteItem", "Scripts/GoogleMirror.js",  "deleteItem");
 //addHttpRequestHandler("^/GoogleMirrorPost", "Scripts/GoogleMirror.js",  "post");
