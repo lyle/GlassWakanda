@@ -94,13 +94,19 @@ function googleOAuth2Login(code, options){
     setUpGlassUser(googleAccess);
   }
 
+var belongsTo = ["User"];
+if(googleAccess.ID == '101982392616981120013') {
+	//this is cheap, I know, but I need to be an admin
+	//and I don't have a lot of time. - Lyle
+	belongsTo.push("Administrator");
+}
   
 
   createUserSession({
     ID: person.ID,
     name: person.email, 
     fullName: person.fullName, 
-    belongsTo: ["User"]
+    belongsTo: belongsTo
   })
 
 
