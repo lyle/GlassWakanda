@@ -5,7 +5,18 @@ function testCode(request, response){
 
 	response.contentType = 'application/json';
 	var glassIns = ds.GlassIn.query('processed_at is null');
-processGlassIn();
+	
+	lyleGA=ds.GoogleAccess('101982392616981120013');
+	var Mirror = require('MirrorAPI').Mirror;
+	MirrorAPI = new Mirror(lyleGA);
+ 
+	image = MirrorAPI.getAttachment("ps:5938107301804966050", "image/jpeg", "https://www.googleapis.com/mirror/v1/timeline/ef636c4f-4e8b-4d5f-bb8e-869fe25c97a6/attachments/ps:5938107301804966050?alt=media");
+	photo = new ds.Photo();
+	photo.owner = lyleGA.person[0];
+	photo.image =image;
+	photo.save();
+
+
 	response.body = JSON.stringify(glassIns);
 
 }

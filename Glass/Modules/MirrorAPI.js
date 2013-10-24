@@ -113,7 +113,7 @@ Mirror.prototype.getAttachmentResource = function(itemId, attachmentId){
 }
 
 Mirror.prototype.getAttachment = function(attachementId, contentType, contentUrl, attemptReAuth){
-	var tempFile, tempStream, imageObj;
+	var imageFile, tempStream, imageObj;
 	var xhr = new XMLHttpRequest();
 	var auth = 'Bearer ' + this.GoogleAccess.access_token;
 	xhr.open('GET', contentUrl);
@@ -123,12 +123,13 @@ Mirror.prototype.getAttachment = function(attachementId, contentType, contentUrl
   	xhr.send();
 
 	if (xhr.readyState == 4 && xhr.status == 200 && xhr.response.size >0){
-		tempFile = File(ds.getTempFolder().path + directory.computeHA1(attachementId) + "." +getFileExt(contentType));
-		tempStream = BinaryStream(tempFile, "write", 50);
+		imageFile = File(ds.getDataFolder().path + directory.computeHA1(attachementId) + "." +getFileExt(contentType));
+		tempStream = BinaryStream(imageFile, "write", 50);
 		tempStream.putBlob(xhr.response);
 		tempStream.close();
-		imageObj = loadImage(tempFile);
-		tempFile.remove();
+		imageObj = loadImage(imageFile);
+    imageObj.setPath(imageFile);
+		//tempFile.remove();
 		
 	}else if (xhr.status == 401 && attemptReAuth && this.GoogleAccess.getRefreshedAccessToken()){
 		imageObj = this.getAttachment(attachementId, contentType, contentUrl, false);
