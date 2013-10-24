@@ -2,19 +2,29 @@
 var mus = require("mustache");
 
 function subscriptionCallBack(request, response){
-	
+	var notification, log, GlassIn;
 	response.contentType = 'application/json';
 	
 	//request.remoteAddress
-	
-	
 	
 	log = ds.GlassLog.createEntity(); 
 	log.request = JSON.stringify(request);
 	log.response = 'ok';
 	log.orig = "subscritionCallBack at " + Date.now() + ' remote:' + request.remoteAddress;
 	log.save();
+
+	notification=JSON.parse(request.body);
 	
+	if(notification.userToken && notification.verifyToken && notification.verifyToken==ds.GoogleAccess.getVerifyTokenSecret()){
+		GlassIn = ds.GlassIn.createEntiy();
+		if(notification.itemId){
+			GlassIn.itemId = notification.itemId;
+		}
+		GlassIn.googleAccount = notification.userToken;
+		GlassIn.notificationBody = request.body;
+		GlassIn.save();
+	}
+
 	response.body = JSON.stringify({"response":"ok"});
 	
 	//save image and process request

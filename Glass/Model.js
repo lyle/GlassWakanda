@@ -20,3 +20,8 @@ model.Photo = require("Model/Photo/Photo-attributes.js");
 model.Meeting = require("Model/Meeting/Meeting-attributes.js");
 model.PhotoComment = require("Model/PhotoComment/PhotoComment-attributes.js");
 
+model.GlassIn = require("Model/GlassIn/GlassIn-attributes.js");
+
+
+
+

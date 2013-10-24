@@ -10,10 +10,9 @@ GoogleAccess.GlassSettings = new Attribute("relatedEntities", "GlassSettings", "
 GoogleAccess.GlassNotifications = new Attribute("relatedEntities", "GlassNotification", "googleAccount", {
 	"reversePath": true
 });
-
-//GoogleAccess.glassSubscriptionNotifications = new Attribute("relatedEntities", "GlassSubscriptionNotification", "GoogleAccess", {
-//	"reversePath": true
-//});
+GoogleAccess.glassIns = new Attribute("relatedEntities", "GlassIns", "googleAccount", {
+	"reversePath": true
+});
 GoogleAccess.access_token = new Attribute("storage", "string",{
 	scope:"publicOnServer"
 });
