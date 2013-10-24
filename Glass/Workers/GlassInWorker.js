@@ -32,11 +32,11 @@ function processSharedMirrorItem(glassIn) {
               owner: person
             });
             photo.image = anImage;
-            if (anImage.meta && anImage.meta.EXIF && anImage.meta.EXIF.DateTimeOriginal) {
-              photo.taken_at = anImage.meta.EXIF.DateTimeOriginal;
-            } else {
+            //if (anImage.meta && anImage.meta.EXIF && anImage.meta.EXIF.DateTimeOriginal) {
+            //  photo.taken_at = anImage.meta.EXIF.DateTimeOriginal;
+            //} else {
               photo.taken_at = new Date();
-            }
+            //}
 
             earlier = moment(photo.taken_at).subtract('days', 1).format("YYYY-MM-DDTHH:mm");
             nowish = moment(photo.taken_at).add('hours', 12).format("YYYY-MM-DDTHH:mm");
