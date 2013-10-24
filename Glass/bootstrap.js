@@ -4,7 +4,7 @@ addHttpRequestHandler("^/login", "Scripts/ReceiveOAuth2.js",  "login");
 addHttpRequestHandler("^/glassListItems", "Scripts/GoogleMirror.js",  "listItems");
 addHttpRequestHandler("^/glassListContactItems", "Scripts/GoogleMirror.js",  "listContactItems");
 
-
+addHttpRequestHandler("^/testCode", "Scripts/testCode.js",  "testCode");
 
 
 //this matches ~userName
