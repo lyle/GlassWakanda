@@ -136,7 +136,19 @@ function list(request, response)
 	
 	}  
 }
-
+function getItem(request, response)
+{
+  var currentUser = currentSession().user;
+  var user= ds.Person.find("ID=:1", currentUser.ID);
+  var mir = new Mirror(user.GoogleAccess);
+  response.contentType = 'application/json';
+  var theQuery = getURLQuery(request.url);
+	if (!user || !theQuery.id) {
+		response.body = "{error:true}";
+	}else{
+		response.body = JSON.stringify(mir.getItem(theQuery.id));
+	}
+}
 function deleteItem(request, response)
 {
   var currentUser = currentSession().user;

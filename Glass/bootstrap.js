@@ -1,6 +1,7 @@
 
 addHttpRequestHandler("^/fromMirrorApi", "Scripts/GoogleMirror.js", "subscriptionCallBack");
 addHttpRequestHandler("^/login", "Scripts/ReceiveOAuth2.js",  "login");
+addHttpRequestHandler("^/glassItem", "Scripts/GoogleMirror.js",  "getItem");
 addHttpRequestHandler("^/glassListItems", "Scripts/GoogleMirror.js",  "listItems");
 addHttpRequestHandler("^/glassListContactItems", "Scripts/GoogleMirror.js",  "listContactItems");
 
