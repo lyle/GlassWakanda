@@ -2,7 +2,7 @@
 var mus = require("mustache");
 
 function subscriptionCallBack(request, response){
-	var notification, log, GlassIn;
+	var notification, log, glassIn;
 	response.contentType = 'application/json';
 	
 	//request.remoteAddress
@@ -16,13 +16,16 @@ function subscriptionCallBack(request, response){
 	notification=JSON.parse(request.body);
 	
 	if(notification.userToken && notification.verifyToken && notification.verifyToken==ds.GoogleAccess.getVerifyTokenSecret()){
-		GlassIn = ds.GlassIn.createEntiy();
+		glassIn = new ds.GlassIn({
+			googleAccount:notification.userToken,
+			notificationBody:request.body
+		});
 		if(notification.itemId){
-			GlassIn.itemId = notification.itemId;
+			glassIn.itemId = notification.itemId;
 		}
-		GlassIn.googleAccount = notification.userToken;
-		GlassIn.notificationBody = request.body;
-		GlassIn.save();
+		//glassIn.googleAccount = notification.userToken;
+		//glassIn.notificationBody = request.body;
+		glassIn.save();
 	}
 
 	response.body = JSON.stringify({"response":"ok"});
