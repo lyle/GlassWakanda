@@ -23,7 +23,7 @@ Mirror.prototype.addSubscription = function(options){
   options = options || {};
   body.callbackUrl = options.callbackUrl || this.callbackUrl;
   body.collection = options.collection || "timeline";
-  body.operation = options.opperation || ['UPDATE','INSERT','DELETE'];
+  body.operation = Array.isArray(options.opperation) ? options.opperation : ['UPDATE','INSERT','DELETE'];
   body.userToken = this.GoogleAccess.ID;
   body.verifyToken = ds.GoogleAccess.getVerifyTokenSecret();
   return this.submitWithRefreshAuth('POST',this.subscriptionsUrl, JSON.stringify(body), true);
@@ -70,8 +70,8 @@ Mirror.prototype.submitWithRefreshAuth = function(method, url, body, attemptReAu
 	var response;
 	xhr.open(method, url);
   	xhr.setRequestHeader('Authorization', auth);
-  	xhr.setRequestHeader('Content-Type','application/json');
   if (body) {
+    xhr.setRequestHeader('Content-Type','application/json');
 		xhr.send(body);
 	}else{
 		xhr.send();

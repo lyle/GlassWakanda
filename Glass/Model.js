@@ -1,4 +1,3 @@
-// converted from guided model
 
 model = new DataStoreCatalog();
 

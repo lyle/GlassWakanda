@@ -25,6 +25,7 @@
   }
 }
 function sendNotification(userInfo){
+    //should swap to using json and creator:{displayname:'',imageUrls:[]}
     var notifyMessage = '<article><figure>';
     if (userInfo.picture){
       notifyMessage += '<img src="' + userInfo.picture + '" height="100%">';

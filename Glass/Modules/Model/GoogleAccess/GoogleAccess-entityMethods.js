@@ -1,11 +1,22 @@
 var entityMethods;
+var googleOAuth2 = require('GoogleOAuth2/GoogleOAuth2').OAuth2;
+var glassApiData = require('ApiAppData').glassUser;
+
+var OAuth2Glass = new googleOAuth2(glassApiData.client_id,
+  glassApiData.client_secret,
+  glassApiData.redirect_uri,
+  {scope:glassApiData.scope,
+    approval_prompt:glassApiData.approval_prompt,
+    access_type:"offline",
+    state: 'glass'
+  });
+
 entityMethods = exports;
 entityMethods.getRefreshedAccessToken = function (){
 	var newTokenSet;
 	if (this.refresh_token) {
 		newTokenSet = OAuth2Glass.refreshAccessToken(this.refresh_token);
 		if (newTokenSet && newTokenSet.error){
-			//console.log(newTokenSet.error);
 			return false;
 		}
 		if (newTokenSet && newTokenSet.access_token){
@@ -14,7 +25,6 @@ entityMethods.getRefreshedAccessToken = function (){
 			return this.access_token;
 		}
 	}else{
-		//console.log('no refresh_token on record');
 		return false;
 	}
 	
