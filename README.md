@@ -44,3 +44,43 @@ I normally log in as root. But wakanda is running as user wakanda so
 The soultion is held in
 
     /opt/wakanda/GlassWakanda
+
+
+### nginx in the front + SSL ###
+
+For hosting glass.wakanda.org I am using SSL and the nginx web server in front. Here is my config file:
+
+	server {
+	  listen 80;
+	  location / {
+		proxy_pass	http://localhost:8081;
+	  }
+	}
+	server {
+	  listen 443;
+	  server_name glass.wakanda.org;
+	  ssl on;
+	  ssl_certificate /etc/nginx/ssl/ssl-bundle.crt;
+	  ssl_certificate_key /etc/nginx/ssl/server.key;
+	  ssl_protocols SSLv3 TLSv1;
+	  #Disables all weak ciphers
+	  ssl_ciphers ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM;
+
+	  location / {
+		proxy_pass	http://localhost:8081;
+	  }
+	}
+	server {
+	  listen 8000;
+	  server_name glass.wakanda.org;
+	  ssl on;
+	  ssl_certificate /etc/nginx/ssl/ssl-bundle.crt;
+	  ssl_certificate_key /etc/nginx/ssl/server.key;
+	  ssl_protocols SSLv3 TLSv1;
+	  #Disables all weak ciphers
+	  ssl_ciphers ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM;
+
+	  location / {
+	        proxy_pass      http://localhost:8080;
+	  }
+	}
