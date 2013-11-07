@@ -28,7 +28,7 @@ function sendNotification(userInfo){
     //should swap to using json and creator:{displayname:'',imageUrls:[]}
     var notifyMessage = '<article><figure>';
     if (userInfo.picture){
-      notifyMessage += '<img src="' + userInfo.picture + '" height="100%">';
+      notifyMessage += '<img src="' + userInfo.picture + '" width="100%">';
     }else{
       notifyMessage += '<img src="http://wakandadb.org/images/wakandaDB_icon_64.png">';
     }
