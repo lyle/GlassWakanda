@@ -29,6 +29,19 @@ Todo:
   * And update those settings to match the stuff from your Google API Project
 * Start Wakanda 6 or later poiting to this solution.
 
+###Installing Wakanda via Debion Package Install####
+
+You can download the Linux All-in-One64bit Installer via command line:
+
+	(example build - get it from wakanda.org/downloads )
+	wget http://download.wakanda.org/StabilizationChannel/v6/Linux/145594/wakanda_6.0-145594_amd64.deb
+
+And then install it via debion package manager (with root privlages)
+
+	dpkg -i wakanda_6.0-145594_amd64.deb
+
+This should create a new `wakanda` user. And create the path `/opt/wakanda` 
+
 You can also use inet.d to run wakanda as a service
 
     /etc/init.d/wakanda start
